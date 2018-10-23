@@ -1,0 +1,17 @@
+C:\Xamarin\StudentApp\StudentApp\StudentApp\bin\Debug\netstandard2.0\StudentApp.deps.json
+C:\Xamarin\StudentApp\StudentApp\StudentApp\bin\Debug\netstandard2.0\StudentApp.dll
+C:\Xamarin\StudentApp\StudentApp\StudentApp\bin\Debug\netstandard2.0\StudentApp.pdb
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.csprojAssemblyReference.cache
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.csproj.CoreCompileInputs.cache
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.AssemblyInfoInputs.cache
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.AssemblyInfo.cs
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.dll
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.pdb
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\ArrivalPage.xaml.g.cs
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\EmergencyPage.xaml.g.cs
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\NotificationOverview.xaml.g.cs
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\NotificationPage.xaml.g.cs
+C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\HostInfoPage.xaml.g.cs

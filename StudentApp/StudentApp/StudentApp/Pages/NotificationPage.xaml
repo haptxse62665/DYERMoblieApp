@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentApp.Pages.NotificationPage"
+             NavigationPage.HasNavigationBar="false"
+             NavigationPage.HasBackButton="false"
+             BackgroundColor="#254F6E"
+             >
+    <ContentPage.Content>
+        <RelativeLayout>
+            <BoxView BackgroundColor="#FE3F3F"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0.5}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"/>
+            <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=1}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"
+                         Padding="15,15,15,30"
+            >
+                <Image Source="alert70.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="150" WidthRequest="150" BackgroundColor="Transparent"/>
+                <!-- Start of Notification details -->
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Location:" TextColor="#00A9DE"/>
+                        <Label Text="Japan" TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Type:" TextColor="#00A9DE"/>
+                        <Label Text="Earthquake" TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Hazard level:" TextColor="#00A9DE"/>
+                        <Label Text="High" TextColor="#F33B3B"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Date:" TextColor="#00A9DE"/>
+                        <Label Text="01/01/2090" TextColor="White"/>
+                    </StackLayout>
+                </StackLayout>
+                <!-- End of Notification details -->
+
+                <!-- Start of Respond elements -->
+                <Label Text="Are you okay?" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                <Button Text="I am okay" TextColor="White" BackgroundColor="#64E45B" CornerRadius="15"/>
+                <Button Text="I am not okay" TextColor="White" BackgroundColor="#FE3F3F" CornerRadius="15"/>
+                <!-- End of Respond elements -->
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

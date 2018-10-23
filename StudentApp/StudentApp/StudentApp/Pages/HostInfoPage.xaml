@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentApp.Pages.HostInfoPage"
+             BackgroundColor="#254f6e"
+             Title="HOST INFORMATION">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <BoxView BackgroundColor="#53CD8A"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0.45}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"/>
+
+            <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=1}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"
+                         Padding="15,15,15,30"
+            >
+                <!-- Upper part -->
+                <Image Source="university128.png" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" BackgroundColor="Transparent"/>
+                <Label Text="FPT UNIVERSITY" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontFamily="Roboto-Bold.ttf" FontSize="Large"/>
+                <Label Text="Hoa Lac High Tech Park,Hanoi, Vietnam" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
+                
+                <!-- Lower part -->
+                <!--Grouping for host details-->
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <!--Grouping for each details-->
+                    <Frame BackgroundColor="#53CD8A" CornerRadius="5">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="phone128.png" HeightRequest="50" WidthRequest="50"/>
+                            <StackLayout>
+                                <Label Text="CONTACT NUMBER" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
+                                <Label Text="+123 456 789" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

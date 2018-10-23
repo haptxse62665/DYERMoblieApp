@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentApp.Pages.ArrivalPage"
+             xmlns:custom="clr-namespace:StudentApp;assembly=StudentApp..NETStandard,Version=v2.0"
+             xmlns:local="clr-namespace:StudentApp"
+             BackgroundColor="#254f6e"
+             Title="ARRIVAL">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <BoxView BackgroundColor="#47FD91"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0.43}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"/>
+
+            <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=1}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"
+                         Padding="15,15,15,30"
+                         >
+                <Image Source="airplane70.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="150" WidthRequest="150" BackgroundColor="Transparent"/>
+                <Label Text="Have you arrived?" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Bold" FontFamily="Robot-Thin"/>
+                <Button BackgroundColor="#47FD91" Text="I have arrived safely" TextColor="#254f6e" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontAttributes="Bold" CornerRadius="5" WidthRequest="200" FontFamily="Roboto-Thin"/>
+                <Label Text="Please enter your updated" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="contact number (if you have any):" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
+                <local:CustomEntry  
+                    CornerRadius="7"  
+                    IsCurvedCornersEnabled="True"  
+                    BorderColor="#47FD91"
+                    BorderWidth="5"
+                    HorizontalTextAlignment="Center"  
+                    FontSize="17"  
+                    Placeholder="Enter your phone number"  
+                    PlaceholderColor="LightGray"  
+                    TextColor="White" 
+                    HeightRequest="40"
+                    WidthRequest="60"
+                    
+                />
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
