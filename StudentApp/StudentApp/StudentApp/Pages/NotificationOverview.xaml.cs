@@ -18,5 +18,12 @@ namespace StudentApp.Pages
 
 		    listView.ItemsSource = new List<string> { "Wafi", "Nur", "Arif" };
         }
-	}
+
+        private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (listView.SelectedItem == null) return;
+            Navigation.PushAsync(new NotificationPage());
+            listView.SelectedItem = null ;
+        }
+    }
 }

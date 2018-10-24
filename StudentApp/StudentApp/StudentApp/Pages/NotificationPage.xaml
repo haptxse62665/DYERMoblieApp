@@ -53,8 +53,8 @@
 
                 <!-- Start of Respond elements -->
                 <Label Text="Are you okay?" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
-                <Button Text="I am okay" TextColor="White" BackgroundColor="#64E45B" CornerRadius="15" HeightRequest="40"/>
-                <Button Text="I am not okay" TextColor="White" BackgroundColor="#FE3F3F" CornerRadius="15" HeightRequest="40"/>
+                <Button Text="I am okay" TextColor="White" BackgroundColor="#64E45B" CornerRadius="15" HeightRequest="40" Clicked="Button_Ok"/>
+                <Button Text="I am not okay" TextColor="White" BackgroundColor="#FE3F3F" CornerRadius="15" HeightRequest="40" Clicked="Button_NotOk"/>
                 <!-- End of Respond elements -->
             </StackLayout>
         </RelativeLayout>

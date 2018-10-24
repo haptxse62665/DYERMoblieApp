@@ -59,7 +59,7 @@
                             <TapGestureRecognizer Tapped="Button_logout"/>
                         </StackLayout.GestureRecognizers>
                         <Image Source="logout128.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
-                        <Button Text="Logout" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand"></Button>
+                        <Button Text="Logout" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_logout"></Button>
                     </StackLayout>
                     <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
 

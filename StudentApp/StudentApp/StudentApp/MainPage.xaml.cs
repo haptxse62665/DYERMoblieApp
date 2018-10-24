@@ -37,7 +37,7 @@ namespace StudentApp
         }
         private void Button_Notifications(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new NotificationPage())
+            Detail = new NavigationPage(new NotificationOverview())
             {
                 BarBackgroundColor = Color.FromHex("#254F6E"),
                 BarTextColor = Color.White

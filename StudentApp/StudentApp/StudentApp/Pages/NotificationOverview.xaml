@@ -36,6 +36,7 @@
 
                 <ListView x:Name="listView"
                           BackgroundColor="White"
+                          ItemSelected="listView_ItemSelected"
                 >
                 </ListView>
             </StackLayout>

@@ -24,5 +24,17 @@ namespace StudentApp.Pages
 	        return true;
 
 	    }
+
+        private async void Button_Ok(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+            
+        }
+
+        private async void Button_NotOk(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+            
+        }
     }
 }
