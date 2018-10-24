@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DYCApp.DYCOverview">
+    <ContentPage.Content>
+        <RelativeLayout >
+            <BoxView BackgroundColor="White"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0.02}"
+            />
+
+            <StackLayout Spacing="0"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1}">
+                <Frame BackgroundColor="White"
+                       BorderColor="Transparent"
+                       CornerRadius="13"
+                       HeightRequest="15">
+                    <StackLayout Orientation="Horizontal"
+                    >
+                        <Label Text="COUNTRY"
+                               HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="No. of students"
+                               HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+
+                <ListView x:Name="listView"
+                          BackgroundColor="White"
+                          ItemSelected="listView_ItemSelected"
+                >
+                </ListView>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
