@@ -26,7 +26,7 @@ namespace StudentApp
             IsPresented = false;
             IsGestureEnabled = true;
         }
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Button_HostInfo(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new HostInfoPage())
             {
@@ -35,7 +35,7 @@ namespace StudentApp
             };
             IsPresented = false;
         }
-        private void Button_Clicked2(object sender, EventArgs e)
+        private void Button_Notifications(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new NotificationPage())
             {
@@ -45,7 +45,7 @@ namespace StudentApp
             IsPresented = false;
         }
 
-        private void Button_Clicked3(object sender, EventArgs e)
+        private void Button_Emergency(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new EmergencyPage())
             {
@@ -55,7 +55,7 @@ namespace StudentApp
             IsPresented = false;
 
         }
-        private void Button_Clickded4(object sender, EventArgs e)
+        private void Button_Arrival(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new ArrivalPage())
             {
@@ -69,6 +69,16 @@ namespace StudentApp
         {
             IsGestureEnabled = false;
             Application.Current.MainPage=new MainPage();
+        }
+
+        private void Button_UserProfile(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new UserProfilePage())
+            {
+                BarBackgroundColor = Color.FromHex("#04B5ED"),
+                BarTextColor = Color.White
+            };
+            IsPresented = false;
         }
     }
 }

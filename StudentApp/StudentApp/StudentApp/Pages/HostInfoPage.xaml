@@ -9,7 +9,7 @@
             <BoxView BackgroundColor="#53CD8A"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                             Property=Height,
-                                                                            Factor=0.45}"
+                                                                            Factor=0.40}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                             Property=Width,
                                                                             Factor=1}"/>
@@ -30,19 +30,38 @@
             >
                 <!-- Upper part -->
                 <Image Source="university128.png" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" BackgroundColor="Transparent"/>
+                <Label/>
                 <Label Text="FPT UNIVERSITY" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontFamily="Roboto-Bold.ttf" FontSize="Large"/>
-                <Label Text="Hoa Lac High Tech Park,Hanoi, Vietnam" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
-                
+                <!--<Label Text="Hoa Lac High Tech Park,Hanoi, Vietnam" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>-->
+                <Label HeightRequest="40"/>
                 <!-- Lower part -->
                 <!--Grouping for host details-->
-                <StackLayout VerticalOptions="CenterAndExpand">
+                <StackLayout VerticalOptions="StartAndExpand" Spacing="10">
                     <!--Grouping for each details-->
-                    <Frame BackgroundColor="#53CD8A" CornerRadius="5">
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="phone128.png" HeightRequest="50" WidthRequest="50"/>
+                    <Frame BackgroundColor="#53CD8A" CornerRadius="5" HeightRequest="60" HorizontalOptions="FillAndExpand" Padding="30,0,30,0" Margin="0,5,0,5">
+                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                            <Image Source="phone128.png" HeightRequest="30" WidthRequest="30"/>
                             <StackLayout>
                                 <Label Text="CONTACT NUMBER" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
                                 <Label Text="+123 456 789" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="#53CD8A" CornerRadius="5" HeightRequest="60" HorizontalOptions="FillAndExpand" Padding="30,0,30,0" Margin="0,3,0,3">
+                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                            <Image Source="envelope128.gif" HeightRequest="30" WidthRequest="30"/>
+                            <StackLayout>
+                                <Label Text="EMAIL" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
+                                <Label Text="international.admission@fpt.edu.vn" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Small"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="#53CD8A" CornerRadius="5" HeightRequest="80" HorizontalOptions="FillAndExpand" Padding="30,0,30,0" Margin="0,5,0,5">
+                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                            <Image Source="addressBook128.png" HeightRequest="30" WidthRequest="30"/>
+                            <StackLayout>
+                                <Label Text="ADDRESS" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
+                                <Label Text="Hoa Lac High Tech Park,Hanoi, Vietnam" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Small"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentApp.Pages.UserProfilePage"
+             BackgroundColor="#254F6E"
+             Title="USER PROFILE"
+             >
+    <ContentPage.Content>
+        <RelativeLayout>
+            <!-- Upper part -->
+            <BoxView BackgroundColor="#04B5ED"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0.45}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"/>
+            <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=1}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"
+                         Padding="15,15,15,30"
+            >
+                <Image Source="firdaus.jpg" HeightRequest="100" WidthRequest="100"/>
+                <Frame BackgroundColor="#254F6E" CornerRadius="15" HorizontalOptions="Fill" HeightRequest="25" VerticalOptions="Fill" WidthRequest="60" Padding="60,0,60,0">
+                    <Label Text="Firdaus Jais" TextColor="White" HorizontalTextAlignment="Center" FontSize="14"/>
+                </Frame>
+                <Button Text="Edit foreign number" TextColor="White" BackgroundColor="Transparent" FontSize="Small"/>
+                <!--Lower part-->
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Spacing="10">
+                    <!-- Group for each information -->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <Label Text="User ID:" TextColor="LightGray" HorizontalOptions="Start" Margin="0,0,5,0" FontSize="18"/>
+                        <Label Text="16X2121" TextColor="White" HorizontalOptions="StartAndExpand" FontSize="18"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" Color="LightGray" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Full Name:" TextColor="LightGray" HorizontalOptions="Start" Margin="0,0,5,0" FontSize="18"/>
+                        <Label Text="Mohd. Firdaus bin Hj Jais chsbhcbshcbhscbchbchsbcshbc" TextColor="White" HorizontalOptions="StartAndExpand" FontSize="18"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" Color="LightGray" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Email:" TextColor="LightGray" HorizontalOptions="Start" Margin="0,0,5,0" FontSize="18"/>
+                        <Label Text="XXXDaus@rentokil.com" TextColor="White" HorizontalOptions="StartAndExpand" FontSize="18"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" Color="LightGray" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Phone number:" TextColor="LightGray" HorizontalOptions="Start" Margin="0,0,5,0" FontSize="18"/>
+                        <Label Text="8885555" TextColor="White" HorizontalOptions="StartAndExpand" FontSize="18"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" Color="LightGray" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Foreign number:" TextColor="LightGray" HorizontalOptions="Start" Margin="0,0,5,0" FontSize="18"/>
+                        <Label Text="1234567" TextColor="White" HorizontalOptions="StartAndExpand" FontSize="18"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" Color="LightGray" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

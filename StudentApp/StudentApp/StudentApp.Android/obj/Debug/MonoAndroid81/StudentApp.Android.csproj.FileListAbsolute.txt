@@ -109,6 +109,13 @@ C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\
 C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\university128.png
 C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\phone128.png
 C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\alert32.png
+C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\alert16.png
+C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\alert24.png
+C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\logout128.png
+C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\envelope128.gif
+C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\addressbook128.png
+C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\firdaus.jpg
+C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\res\drawable\guest70.png
 C:\Xamarin\StudentApp\StudentApp\StudentApp\bin\Debug\netstandard2.0\StudentApp.dll
 C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\obj\Debug\MonoAndroid81\linksrc\StudentApp.Android.pdb
 C:\Xamarin\StudentApp\StudentApp\StudentApp.Android\bin\Debug\StudentApp.dll.mdb

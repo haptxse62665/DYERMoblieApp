@@ -2340,22 +2340,28 @@ namespace StudentApp.Droid
 			public const int abc_vector_test = 2131296339;
 			
 			// aapt resource value: 0x7F010002
-			public const int airplane = 2130771970;
+			public const int addressBook128 = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int airplane70 = 2130771971;
+			public const int airplane = 2130771971;
 			
 			// aapt resource value: 0x7F010004
-			public const int alert-16 = 2130771972;
+			public const int airplane70 = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int alert32 = 2130771973;
+			public const int alert16 = 2130771973;
 			
 			// aapt resource value: 0x7F010006
-			public const int alert64 = 2130771974;
+			public const int alert24 = 2130771974;
 			
 			// aapt resource value: 0x7F010007
-			public const int alert70 = 2130771975;
+			public const int alert32 = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int alert64 = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int alert70 = 2130771977;
 			
 			// aapt resource value: 0x7F090054
 			public const int avd_hide_password = 2131296340;
@@ -2381,8 +2387,17 @@ namespace StudentApp.Droid
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
 			
-			// aapt resource value: 0x7F010008
-			public const int error = 2130771976;
+			// aapt resource value: 0x7F010010
+			public const int envelope128 = 2130771984;
+			
+			// aapt resource value: 0x7F010011
+			public const int error = 2130771985;
+			
+			// aapt resource value: 0x7F010012
+			public const int firdaus = 2130771986;
+			
+			// aapt resource value: 0x7F010013
+			public const int guest70 = 2130771987;
 			
 			// aapt resource value: 0x7F090054
 			public const int ic_audiotrack_dark = 2131296340;
@@ -2915,6 +2930,9 @@ namespace StudentApp.Droid
 			// aapt resource value: 0x7F090104
 			public const int ic_vol_type_tv_light = 2131296516;
 			
+			// aapt resource value: 0x7F010014
+			public const int logout128 = 2130771988;
+			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
 			
@@ -3014,8 +3032,8 @@ namespace StudentApp.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
-			// aapt resource value: 0x7F010009
-			public const int phone128 = 2130771977;
+			// aapt resource value: 0x7F010015
+			public const int phone128 = 2130771989;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -3023,14 +3041,14 @@ namespace StudentApp.Droid
 			// aapt resource value: 0x7F09006A
 			public const int tooltip_frame_light = 2131296362;
 			
-			// aapt resource value: 0x7F010010
-			public const int UBD_logo = 2130771984;
+			// aapt resource value: 0x7F010016
+			public const int UBD_logo = 2130771990;
 			
-			// aapt resource value: 0x7F010011
-			public const int UBD_logo_White = 2130771985;
+			// aapt resource value: 0x7F010017
+			public const int UBD_logo_White = 2130771991;
 			
-			// aapt resource value: 0x7F010012
-			public const int university128 = 2130771986;
+			// aapt resource value: 0x7F010018
+			public const int university128 = 2130771992;
 			
 			static Drawable()
 			{

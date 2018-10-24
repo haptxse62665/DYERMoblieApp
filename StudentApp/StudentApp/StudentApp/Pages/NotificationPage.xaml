@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StudentApp.Pages.NotificationPage"
-             NavigationPage.HasNavigationBar="false"
-             NavigationPage.HasBackButton="false"
+             NavigationPage.HasNavigationBar="False"
              BackgroundColor="#254F6E"
+             NavigationPage.HasBackButton="False"
              >
     <ContentPage.Content>
         <RelativeLayout>
@@ -33,28 +33,28 @@
                 <!-- Start of Notification details -->
                 <StackLayout HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Location:" TextColor="#00A9DE"/>
-                        <Label Text="Japan" TextColor="White"/>
+                        <Label Text="Location:" TextColor="#00A9DE" FontSize="15"/>
+                        <Label Text="Japan" TextColor="White" FontSize="15"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Type:" TextColor="#00A9DE"/>
-                        <Label Text="Earthquake" TextColor="White"/>
+                        <Label Text="Type:" TextColor="#00A9DE" FontSize="15"/>
+                        <Label Text="Earthquake" TextColor="White" FontSize="15"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Hazard level:" TextColor="#00A9DE"/>
-                        <Label Text="High" TextColor="#F33B3B"/>
+                        <Label Text="Hazard level:" TextColor="#00A9DE" FontSize="15"/>
+                        <Label Text="High" TextColor="#F33B3B" FontSize="15"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Date:" TextColor="#00A9DE"/>
-                        <Label Text="01/01/2090" TextColor="White"/>
+                        <Label Text="Date:" TextColor="#00A9DE" FontSize="15"/>
+                        <Label Text="01/01/2090" TextColor="White" FontSize="15"/>
                     </StackLayout>
                 </StackLayout>
                 <!-- End of Notification details -->
 
                 <!-- Start of Respond elements -->
-                <Label Text="Are you okay?" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-                <Button Text="I am okay" TextColor="White" BackgroundColor="#64E45B" CornerRadius="15"/>
-                <Button Text="I am not okay" TextColor="White" BackgroundColor="#FE3F3F" CornerRadius="15"/>
+                <Label Text="Are you okay?" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                <Button Text="I am okay" TextColor="White" BackgroundColor="#64E45B" CornerRadius="15" HeightRequest="40"/>
+                <Button Text="I am not okay" TextColor="White" BackgroundColor="#FE3F3F" CornerRadius="15" HeightRequest="40"/>
                 <!-- End of Respond elements -->
             </StackLayout>
         </RelativeLayout>
