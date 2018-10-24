@@ -15,11 +15,12 @@ namespace DYCApp.View
 		public ListStudentPage ()
 		{
 			InitializeComponent ();
+            listView.ItemsSource = new List<string> { "Wawa", "Fifi", "Binh","Vu", "Ha" };
         }
 
-        private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            await Navigation.PushAsync(new ListStudentPage());
         }
     }
 }

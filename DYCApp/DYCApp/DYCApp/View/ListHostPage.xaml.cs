@@ -16,12 +16,12 @@ namespace DYCApp
 		public ListHostPage ()
 		{
 			InitializeComponent ();
-            listView.ItemsSource = new List<string> { "Google", "Facebook", "Amazon" };
+            listView.ItemsSource = new List<string> { "Tokyo University", "Osaka University", "Sakura University" };
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            await Navigation.PushAsync(new ListStudentPage());
+            await Navigation.PushAsync(new StudentProfilePage());
         }
     }
 }

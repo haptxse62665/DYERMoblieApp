@@ -24,9 +24,9 @@
                        HeightRequest="15">
                     <StackLayout Orientation="Horizontal"
                     >
-                        <Label Text="COUNTRY"
+                        <Label Text="Name"
                                HorizontalOptions="CenterAndExpand"/>
-                        <Label Text="No. of students"
+                        <Label Text="Location"
                                HorizontalOptions="CenterAndExpand"/>
                     </StackLayout>
                 </Frame>
