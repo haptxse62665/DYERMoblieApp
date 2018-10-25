@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DYCApp.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,20 +19,15 @@ namespace DYCApp
 
             private async void Button_Login(object sender, EventArgs e)
             {
-                //Detail = new NavigationPage(new HomePage())
-                //{
-                //    BarBackgroundColor = Color.FromHex("#000000"),
-                //    BarTextColor = Color.White
-                //};
+               
                 Detail = new NavigationPage(new DYCOverview())
                 {
-                    BarBackgroundColor = Color.FromHex("#FE3F3F"),
+                    BarBackgroundColor = Color.FromHex("#254f6e"),
                     BarTextColor = Color.White
                 };
                 IsPresented = false;
                 IsGestureEnabled = true;
-
-                //logOut.IsVisible = false;
+            
 
             }
             //homepage
@@ -39,7 +35,7 @@ namespace DYCApp
             {
                 Detail = new NavigationPage(new DYCOverview())
                 {
-                    BarBackgroundColor = Color.FromHex("#FE3F3F"),
+                    BarBackgroundColor = Color.FromHex("#254f6e"),
                     BarTextColor = Color.White
                 };
                 IsPresented = false;
@@ -63,21 +59,21 @@ namespace DYCApp
 
         private void Button_Responses(object sender, EventArgs e)
         {
-            //Detail = new NavigationPage(new EmergencyPage())
-            //{
-            //    BarBackgroundColor = Color.FromHex("#FE3F3F"),
-            //    BarTextColor = Color.White
-            //};
+            Detail = new NavigationPage(new ResponsesPage())
+            {
+                BarBackgroundColor = Color.FromHex("#254f6e"),
+                BarTextColor = Color.White
+            };
             IsPresented = false;
 
         }
         private void Button_Arrived(object sender, EventArgs e)
         {
-            //Detail = new NavigationPage(new ArrivalPage())
-            //{
-            //    BarBackgroundColor = Color.FromHex("#47FD91"),
-            //    BarTextColor = Color.White
-            //};
+            Detail = new NavigationPage(new ArrivedPage())
+            {
+                BarBackgroundColor = Color.FromHex("#254f6e"),
+                BarTextColor = Color.White
+            };
             IsPresented = false;
         }
 

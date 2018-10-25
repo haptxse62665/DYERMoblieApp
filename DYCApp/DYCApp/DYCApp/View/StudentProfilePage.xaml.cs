@@ -15,6 +15,8 @@ namespace DYCApp.View
 		public StudentProfilePage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            
+        }
+            
+    }
 }

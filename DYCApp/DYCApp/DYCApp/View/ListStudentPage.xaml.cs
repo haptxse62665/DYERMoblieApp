@@ -20,7 +20,7 @@ namespace DYCApp.View
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            await Navigation.PushAsync(new ListStudentPage());
+            await Navigation.PushAsync(new StudentProfilePage());
         }
     }
 }

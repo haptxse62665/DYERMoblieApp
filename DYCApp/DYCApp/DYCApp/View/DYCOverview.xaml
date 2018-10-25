@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DYCApp.DYCOverview">
+             x:Class="DYCApp.DYCOverview"
+             BackgroundColor="#254F6E"
+             Title="OVERVIEW">
     <ContentPage.Content>
         <RelativeLayout >
             <BoxView BackgroundColor="White"
@@ -25,9 +27,13 @@
                     <StackLayout Orientation="Horizontal"
                     >
                         <Label Text="COUNTRY"
-                               HorizontalOptions="CenterAndExpand"/>
+                               HorizontalOptions="CenterAndExpand"
+                               TextColor="#254F6E"
+                               FontAttributes="Bold"/>
                         <Label Text="No. of students"
-                               HorizontalOptions="CenterAndExpand"/>
+                               HorizontalOptions="CenterAndExpand"
+                               TextColor="#254F6E"
+                               FontAttributes="Bold"/>
                     </StackLayout>
                 </Frame>
 

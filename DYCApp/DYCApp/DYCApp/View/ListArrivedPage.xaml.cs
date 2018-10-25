@@ -1,5 +1,4 @@
-﻿using DYCApp.View;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,20 +7,21 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace DYCApp
+namespace DYCApp.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ListHostPage : ContentPage
+	public partial class ListArrivedPage : ContentPage
 	{
-		public ListHostPage ()
+		public ListArrivedPage ()
 		{
 			InitializeComponent ();
-            listView.ItemsSource = new List<string> { "Tokyo University", "Osaka University", "Sakura University" };
+            listViewARRIVED.ItemsSource = new List<string> { "WaWa", "Fidaus", "Vu" };
+            listView.ItemsSource = new List<string> { "WaWa", "Fidaus", "Vu" };
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            await Navigation.PushAsync(new ListStudentPage());
+            await Navigation.PushAsync(new StudentProfilePage());
         }
     }
 }

@@ -27,10 +27,14 @@
                        HeightRequest="15">
                     <StackLayout Orientation="Horizontal"
                     >
-                        <Label Text="COUNTRY"
-                               HorizontalOptions="CenterAndExpand"/>
-                        <Label Text="No. of students"
-                               HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="Name"
+                               HorizontalOptions="CenterAndExpand"
+                               TextColor="#254F6E"
+                               FontAttributes="Bold"/>
+                        <Label Text="Hazard Level"
+                               HorizontalOptions="CenterAndExpand"
+                               TextColor="#254F6E"
+                               FontAttributes="Bold"/>
                     </StackLayout>
                 </Frame>
 

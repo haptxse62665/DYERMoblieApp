@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DYCApp.ListHostPage"
+             x:Class="DYCApp.View.ListResponsesPage"
              BackgroundColor="#254F6E"
-             Title="HOST">
+             Title="RESPONSED">
     <ContentPage.Content>
         <RelativeLayout >
             <BoxView BackgroundColor="White"
@@ -26,17 +26,31 @@
                        HeightRequest="15">
                     <StackLayout Orientation="Horizontal"
                     >
-                        <Label Text="HOST"
-                               HorizontalOptions="CenterAndExpand"
-                               TextColor="#254F6E"
-                               FontAttributes="Bold"/>
-                        <Label Text="No. of students"
+                        <Label Text="JAPAN"
                                HorizontalOptions="CenterAndExpand"
                                TextColor="#254F6E"
                                FontAttributes="Bold"/>
                     </StackLayout>
                 </Frame>
-
+                <StackLayout 
+                    >
+                    <Label Text="RESPONSED"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+                <ListView x:Name="listViewRESPONSED"
+                          BackgroundColor="White"
+                          ItemSelected="listView_ItemSelected"
+                >
+                </ListView>
+                <StackLayout 
+                    >
+                    <Label Text="NOT RESPONSED"
+                               HorizontalOptions="StartAndExpand"
+                           TextColor="#254F6E"
+                               FontAttributes="Bold"/>
+                </StackLayout>
                 <ListView x:Name="listView"
                           BackgroundColor="White"
                           ItemSelected="listView_ItemSelected"

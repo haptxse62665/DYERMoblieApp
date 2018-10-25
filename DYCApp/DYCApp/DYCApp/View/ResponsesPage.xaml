@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DYCApp.ListHostPage"
+             x:Class="DYCApp.View.ResponsesPage"
              BackgroundColor="#254F6E"
-             Title="HOST">
+             Title="RESPONSED">
     <ContentPage.Content>
         <RelativeLayout >
             <BoxView BackgroundColor="White"
@@ -26,11 +26,11 @@
                        HeightRequest="15">
                     <StackLayout Orientation="Horizontal"
                     >
-                        <Label Text="HOST"
+                        <Label Text="COUNTRY"
                                HorizontalOptions="CenterAndExpand"
                                TextColor="#254F6E"
                                FontAttributes="Bold"/>
-                        <Label Text="No. of students"
+                        <Label Text="RESPONSED"
                                HorizontalOptions="CenterAndExpand"
                                TextColor="#254F6E"
                                FontAttributes="Bold"/>

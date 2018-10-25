@@ -4,7 +4,6 @@ using System.Linq;
 using ImageCircle.Forms.Plugin.iOS;
 using Foundation;
 using UIKit;
-
 namespace StudentApp.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 

@@ -21,5 +21,14 @@ namespace StudentApp.Pages
 		    Student std4 = new Student("16b2197", "16b2197@ubd.edu.bn", 8800271, "Wafi Hs", "FOS", 8888888);
 		    
 		}
-	}
+
+       
+        private void ToolbarItem_Clicked_1(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new MainPage()
+            {
+                IsGestureEnabled = false
+            };
+        }
+    }
 }
