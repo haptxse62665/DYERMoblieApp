@@ -40,6 +40,9 @@
                     <!--Grouping for each details-->
                     <Frame BackgroundColor="#53CD8A" CornerRadius="5" HeightRequest="60" HorizontalOptions="FillAndExpand" Padding="30,0,30,0" Margin="0,5,0,5">
                         <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Call_Tapped"/>
+                            </StackLayout.GestureRecognizers>
                             <Image Source="phone128.png" HeightRequest="30" WidthRequest="30"/>
                             <StackLayout>
                                 <Label Text="CONTACT NUMBER" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
@@ -49,6 +52,9 @@
                     </Frame>
                     <Frame BackgroundColor="#53CD8A" CornerRadius="5" HeightRequest="60" HorizontalOptions="FillAndExpand" Padding="30,0,30,0" Margin="0,3,0,3">
                         <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Mail_Tapped"/>
+                            </StackLayout.GestureRecognizers>
                             <Image Source="envelope128.gif" HeightRequest="30" WidthRequest="30"/>
                             <StackLayout>
                                 <Label Text="EMAIL" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
@@ -58,6 +64,9 @@
                     </Frame>
                     <Frame BackgroundColor="#53CD8A" CornerRadius="5" HeightRequest="80" HorizontalOptions="FillAndExpand" Padding="30,0,30,0" Margin="0,5,0,5">
                         <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Address_Tapped"/>
+                            </StackLayout.GestureRecognizers>
                             <Image Source="addressBook128.png" HeightRequest="30" WidthRequest="30"/>
                             <StackLayout>
                                 <Label Text="ADDRESS" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
