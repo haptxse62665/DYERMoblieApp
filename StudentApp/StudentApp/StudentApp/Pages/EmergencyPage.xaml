@@ -5,11 +5,14 @@
              BackgroundColor="#FE3F3F"
              Title="EMERGENCY">
     <ContentPage.Content>
-        <StackLayout Padding="0, 50, 0, 0">
-            <Label Text="Emergency use only!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  TextColor="White" FontAttributes="Bold" FontSize="Large" FontFamily="Muli-SemiBold.ttf"/>
-            <Image Source="error.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="200"/>
-            <Label Text="I am in trouble" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Large" FontFamily="Muli-Regular.ttf"/>
-            <Button Text="Send my location"  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"  TextColor="#FE3F3F" BackgroundColor="White" CornerRadius="10" FontAttributes="Bold" FontSize="Large"  FontFamily="Muli-SemiBold.ttf" Clicked="Button_Clicked"/>
-        </StackLayout>
+        <ScrollView>
+
+            <StackLayout Padding="0, 50, 0, 0">
+                <Label Text="Emergency use only!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  TextColor="White" FontAttributes="Bold" FontSize="Large" FontFamily="Muli-SemiBold.ttf"/>
+                <Image Source="error.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="200"/>
+                <Label Text="I am in trouble" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Large" FontFamily="Muli-Regular.ttf"/>
+                <Button Text="Send my location"  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"  TextColor="#FE3F3F" BackgroundColor="White" CornerRadius="10" FontAttributes="Bold" FontSize="Large"  FontFamily="Muli-SemiBold.ttf" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

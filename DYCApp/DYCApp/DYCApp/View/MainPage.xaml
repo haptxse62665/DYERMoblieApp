@@ -9,6 +9,7 @@
     <MasterDetailPage.Master>
         <ContentPage BackgroundColor="#254f6e" Title="Master">
             <ContentPage.Content>
+                <ScrollView>
                 <StackLayout Margin="0,30,0,5" Spacing="0" >
                     <StackLayout Orientation="Horizontal" Padding="50, 0, 0, 50">
                         <Image Source="UBD_logo.png" HeightRequest="100" WidthRequest="60" HorizontalOptions="EndAndExpand" />
@@ -48,10 +49,10 @@
                     <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
                     <StackLayout Padding="30,0,0,0"  Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Button_UserProfile"/>
+                            <TapGestureRecognizer Tapped="Button_TeacherProfile"/>
                         </StackLayout.GestureRecognizers>
                         <Image Source="guest70.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
-                        <Button Text="User profile" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand"></Button>
+                        <Button Text="Teacher profile" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_TeacherProfile"></Button>
                     </StackLayout>
                     <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
                     <StackLayout Padding="30,0,0,0"  Orientation="Horizontal">
@@ -64,6 +65,7 @@
                     <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
 
                 </StackLayout>
+                </ScrollView>
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master>

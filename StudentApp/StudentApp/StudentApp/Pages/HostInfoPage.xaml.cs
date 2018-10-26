@@ -37,7 +37,8 @@ namespace StudentApp.Pages
             var location = locations?.FirstOrDefault();
             string Latitude = location.Latitude.ToString().Replace(',', '.');
             string Longitude = location.Longitude.ToString().Replace(',', '.');
-            Device.OpenUri(new Uri("http://maps.google.com/?daddr=" + Latitude + "," + Longitude));
+            //Device.OpenUri(new Uri("http://maps.google.com/?daddr=" + Latitude + "," + Longitude));
+            Device.OpenUri(new Uri("http://maps.google.com/?q=" + Latitude + "," + Longitude));
         }
     }
 }

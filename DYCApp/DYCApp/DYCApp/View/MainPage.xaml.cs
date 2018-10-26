@@ -83,13 +83,13 @@ namespace DYCApp
             Application.Current.MainPage = new MainPage();
         }
 
-        private void Button_UserProfile(object sender, EventArgs e)
+        private void Button_TeacherProfile(object sender, EventArgs e)
         {
-            //Detail = new NavigationPage(new UserProfilePage())
-            //{
-            //    BarBackgroundColor = Color.FromHex("#04B5ED"),
-            //    BarTextColor = Color.White
-            //};
+            Detail = new NavigationPage(new TeacherProfilePage())
+            {
+                BarBackgroundColor = Color.FromHex("#04B5ED"),
+                BarTextColor = Color.White
+            };
             IsPresented = false;
         }
     }

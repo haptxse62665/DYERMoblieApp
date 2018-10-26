@@ -33,8 +33,8 @@
                 <Image Source="airplane70.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="150" WidthRequest="150" BackgroundColor="Transparent"/>
                 <Label Text="Have you arrived?" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Bold" FontFamily="Robot-Thin"/>
                 <Button BackgroundColor="#47FD91" Text="I have arrived safely" TextColor="#254f6e" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontAttributes="Bold" CornerRadius="5" WidthRequest="200" FontFamily="Roboto-Thin"/>
-                <Label Text="Please enter your updated" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
-                <Label Text="contact number (if you have any):" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="Please enter your updated" HorizontalOptions="CenterAndExpand"  TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="contact number (if you have any):" HorizontalOptions="CenterAndExpand"  TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
                 <local:CustomEntry  
                     CornerRadius="7"  
                     IsCurvedCornersEnabled="True"  

@@ -5,6 +5,7 @@
              BackgroundColor="#254f6e"
              Title="HOST INFORMATION">
     <ContentPage.Content>
+        <ScrollView>
         <RelativeLayout>
             <BoxView BackgroundColor="#53CD8A"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -36,7 +37,7 @@
                 <Label HeightRequest="40"/>
                 <!-- Lower part -->
                 <!--Grouping for host details-->
-                <StackLayout VerticalOptions="StartAndExpand" Spacing="10">
+                <StackLayout VerticalOptions="StartAndExpand" Spacing="10" Padding="0,20,0,0">
                     <!--Grouping for each details-->
                     <Frame BackgroundColor="#53CD8A" CornerRadius="5" HeightRequest="60" HorizontalOptions="FillAndExpand" Padding="30,0,30,0" Margin="0,5,0,5">
                         <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
@@ -77,5 +78,6 @@
                 </StackLayout>
             </StackLayout>
         </RelativeLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
