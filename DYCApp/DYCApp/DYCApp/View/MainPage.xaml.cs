@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DYCApp.View;
 using Xamarin.Forms;
 
 namespace DYCApp
@@ -53,11 +54,11 @@ namespace DYCApp
        
         private void Button_CreateNotifications(object sender, EventArgs e)
         {
-            //Detail = new NavigationPage(new NotificationPage())
-            //{
-            //    BarBackgroundColor = Color.FromHex("#254F6E"),
-            //    BarTextColor = Color.White
-            //};
+            Detail = new NavigationPage(new Create_Notification())
+            {
+                BarBackgroundColor = Color.FromHex("#254F6E"),
+                BarTextColor = Color.White
+            };
             IsPresented = false;
         }
 

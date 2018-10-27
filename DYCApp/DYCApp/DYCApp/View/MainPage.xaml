@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DYCApp"
              x:Class="DYCApp.MainPage"
-             xmlns:custom="clr-namespace:DYCApp;assembly=DYCApp..NETStandard,Version=v2.0"
+             xmlns:custom="clr-namespace:DYCApp;assembly=DYCApp.NETStandard,Version=v2.0"
              BackgroundColor="#254f6e"
              >
     <MasterDetailPage.Master>
@@ -22,6 +22,7 @@
                         <Button Text="Overview" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" Clicked="Button_Overview"></Button>
                     </StackLayout>
                     <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
+                    <!-- Create notification master -->
                     <StackLayout Padding="30,0,0,0" Orientation="Horizontal" >
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Button_CreateNotifications"/>
