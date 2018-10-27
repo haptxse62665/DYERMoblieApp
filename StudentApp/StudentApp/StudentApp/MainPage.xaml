@@ -102,6 +102,8 @@
                     WidthRequest="300"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Center"
+                    x:Name="Username"
+                   
                     />
                 <local:CustomEntry  
                     CornerRadius="15"  
@@ -118,6 +120,7 @@
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Center"
                     IsPassword="True"
+                    x:Name="Password"
                 />
                 <Button Text="Login" 
                         TextColor="White"

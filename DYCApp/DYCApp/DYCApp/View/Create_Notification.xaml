@@ -119,21 +119,7 @@
                     
             
                 <!-- Pop up -->
-                <!-- Loading pop up -->
-                <ContentView x:Name="popupLoadingView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" 
-                             RelativeLayout.XConstraint="{ConstraintExpression
-                                                            Type=RelativeToParent, Property=Width,Factor=0.02}"
-                             RelativeLayout.YConstraint="{ConstraintExpression
-                                                            Type=RelativeToParent, Property=Height,Factor=0.25}">
-                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                        <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="200" BackgroundColor="White">
-
-                            <ActivityIndicator x:Name="activityIndicator" Margin="0,50,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" WidthRequest="30" HeightRequest="30" ></ActivityIndicator>
-                            <Label x:Name="lblLoadingText" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" Text="Loading..."></Label>
-                        </StackLayout>
-                    </StackLayout>
-                </ContentView>
-                <!-- Change number pop up -->
+                <!-- Change number pop up --><!--
             <ContentView x:Name="popupLoginView" BackgroundColor="#C0808080" IsVisible="false" 
                              RelativeLayout.XConstraint="{ConstraintExpression
                                                             Type=RelativeToParent, Property=Width,Factor=0}"
@@ -146,12 +132,13 @@
                          >
                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="0">
                     <Label Text="Update foreign number" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontSize="18" BackgroundColor="#04B5ED" HeightRequest="50"/>
-                        <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="300" BackgroundColor="White">
+                        <StackLayout Orientation="Vertical" HeightRequest="200" WidthRequest="300" BackgroundColor="White">
                             <Entry Margin="20,20,20,10" Placeholder="Enter new number"></Entry>
-                        <Button Margin="20,0,20,0" Text="Update" TextColor="White" CornerRadius="5" BackgroundColor="#04B5ED"></Button>
+                        <Button Margin="20,0,20,0" Text="Update" TextColor="White" CornerRadius="5" BackgroundColor="#04B5ED" Clicked="Button_Clicked"></Button>
+                        <Button Margin="20,0,20,0" Text="Cancel" TextColor="White" CornerRadius="5" BackgroundColor="Green" Clicked="Button_Clicked"></Button>
                         </StackLayout>
                     </StackLayout>
-                </ContentView>
+                </ContentView>-->
 </RelativeLayout>
         
     </ContentPage.Content>

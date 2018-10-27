@@ -14,7 +14,8 @@ namespace StudentApp.Pages
 	{
 		public NotificationPage ()
 		{
-			InitializeComponent ();
+			InitializeComponent (); 
+            
 		}
         //Disable back-button
 	    protected override bool OnBackButtonPressed()
@@ -27,7 +28,7 @@ namespace StudentApp.Pages
 
         private async void Button_Ok(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PopModalAsync();
             
         }
 

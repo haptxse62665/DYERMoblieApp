@@ -23,11 +23,14 @@ namespace DYCApp.View
 		    };
         }
 
-	    private void Button_CreateNotification(object sender, EventArgs e)
-	    {
-	        popupLoadingView.IsVisible = false;
-	        popupLoginView.IsVisible = true;
-	        activityIndicator.IsRunning = false;
-	    }
-	}
+	    //private void Button_CreateNotification(object sender, EventArgs e)
+	    //{
+	    //    popupLoginView.IsVisible = true;
+	    //}
+
+     //   private void Button_Clicked(object sender, EventArgs e)
+     //   {
+     //       popupLoginView.IsVisible = false;
+     //   }
+    }
 }

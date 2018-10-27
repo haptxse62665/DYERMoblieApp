@@ -26,5 +26,15 @@ namespace StudentApp.Pages
                 IsGestureEnabled = false
             };
         }
+
+        private async void Button_UpdatePhoneNumber(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ChangeNumber());
+        }
+
+        //private void Button_Clicked(object sender, EventArgs e)
+        //{
+        //    popupLoginView.IsVisible = false;
+        //}
     }
 }

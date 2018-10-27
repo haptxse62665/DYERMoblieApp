@@ -49,7 +49,6 @@
                         </controls:CircleImage.HeightRequest>
                     </controls:CircleImage>
 
-                    <Button Text="Edit foreign number" TextColor="White" BackgroundColor="#04B5ED" FontSize="Small"/>
                 </StackLayout>
 
                 <!--Lower part-->

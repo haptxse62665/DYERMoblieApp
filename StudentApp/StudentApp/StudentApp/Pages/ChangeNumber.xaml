@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StudentApp"
+             x:Class="StudentApp.Pages.ChangeNumber"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#254f6e"
+             Padding="30">
+    <ContentPage.Content>
+
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="20"  BackgroundColor="#EAE8E8">
+            <Label Text="UPDATE NUMBER" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontSize="Large" BackgroundColor="#04B5ED"/>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Padding="20,20,20,20">
+                <Label Text="Your foreign number: " FontSize="Medium" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Start"/>
+            <local:CustomEntry  
+                    CornerRadius="15"  
+                    IsCurvedCornersEnabled="True"  
+                    BorderColor="Black"      
+                    HorizontalTextAlignment="Start"  
+                    FontSize="15"  
+                    Placeholder="123456789"  
+                    PlaceholderColor="White"  
+                    TextColor="White"  
+                    FontAttributes="Bold" 
+                    HeightRequest="37"
+                    WidthRequest="300"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                   IsEnabled="False"
+                    />
+
+            <Label Text="New foreign number: " FontSize="Medium"  FontAttributes="Bold" TextColor="Black" HorizontalOptions="Start"/>
+            <local:CustomEntry  
+                    CornerRadius="15"  
+                    IsCurvedCornersEnabled="True"  
+                    BorderColor="Black"      
+                    HorizontalTextAlignment="Start"  
+                    FontSize="15"  
+                    PlaceholderColor="Black"  
+                    TextColor="Black"  
+                    FontAttributes="Bold" 
+                    HeightRequest="37"
+                    WidthRequest="300"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    Keyboard="Numeric"
+                    />
+
+
+            <Button Margin="20,0,20,0" Text="Update" TextColor="White" CornerRadius="5" BackgroundColor="#04B5ED" Clicked="Button_Clicked"></Button>
+
+            <Button Margin="20,0,20,0" Text="Cancel" TextColor="Black" CornerRadius="5" BackgroundColor="LightGray" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

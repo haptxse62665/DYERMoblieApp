@@ -22,7 +22,7 @@ namespace StudentApp.Pages
         private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (listView.SelectedItem == null) return;
-            Navigation.PushAsync(new NotificationPage());
+            Navigation.PushModalAsync(new NotificationPage());
             listView.SelectedItem = null ;
         }
     }
