@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DYCApp.View.Create_Notification"
+             xmlns:custom="clr-namespace:DYCApp;assembly=DYCApp.NETStandard,Version=v2.0"
+             xmlns:local="clr-namespace:DYCApp"
+             BackgroundColor="#254F6E"
+             Title="CREATE NOTIFICATION"
+             >
+    <ContentPage.Content>
+        
+            <RelativeLayout >
+                <BoxView BackgroundColor="White"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0.03}"
+                />
+
+            <!--<BoxView x:Name="redBox" BackgroundColor="#DE0044" 
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0.40}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"/>
+                <Frame BackgroundColor="#254f6e" CornerRadius="15"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                                                                         ElementName=redBox,
+                                                                         Property=Height,
+                                                                         Factor=1,
+                                                                         Constant=-20}"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Height,
+                                                                            Factor=0.10}"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                            Property=Width,
+                                                                            Factor=1}"/>-->
+                <!-- Cover -->
+                <!--<BoxView BackgroundColor="#254f6e"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0.35}"
+                />-->
+                <!--<StackLayout Padding="30,0,30,30" BackgroundColor="#DE0044">
+                    <Image Source="alert70dpi.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="150" WidthRequest="150"/>
+                    
+                </StackLayout>-->
+
+                        <!--<Frame BackgroundColor="#254f6e"
+                               BorderColor="Transparent"
+                               CornerRadius="13"
+                               HeightRequest="15"
+                               HorizontalOptions="FillAndExpand"
+                               >
+                            <Label TextColor="White" Text=""/>
+                        </Frame>-->
+                        <!-- Inputs group-->
+                        <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression
+                                                                        Type=RelativeToParent, 
+                                                                        Property=Width,
+                                                                        Factor=1}"
+                                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                                                                        Type=RelativeToParent, 
+                                                                        Property=Height, 
+                                                                        Factor=1}">
+                            <Frame BackgroundColor="White"
+                                   BorderColor="Transparent"
+                                   CornerRadius="13"
+                                   HeightRequest="15">
+                            </Frame>
+                            <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20,0,20,20">
+                                <Picker Title="To" WidthRequest="300">
+                                    <Picker.Items>
+                                        <x:String>All</x:String>
+                                        <x:String>Country</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                                <Picker Title="Host" WidthRequest="300">
+                                    <Picker.Items>
+                                        <x:String>All host</x:String>
+                                        <x:String>Keio</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                                <Entry Placeholder="Message title"  
+                                       PlaceholderColor="#9D9999"
+                                       HeightRequest="40"
+                                       WidthRequest="310"
+                                       FontSize="18"
+
+                                />
+                                <Entry Placeholder="Message content"  
+                                       PlaceholderColor="#9D9999"
+                                       HeightRequest="40"
+                                       WidthRequest="310"
+                                       FontSize="18"
+                                />
+                                <Picker Title="Hazard" WidthRequest="300" TextColor="White">
+                                    <Picker.Items>
+                                        <x:String>High</x:String>
+                                        <x:String>Medium</x:String>
+                                        <x:String>Low</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                                <DatePicker MinimumDate="01/01/2018"
+                                            MaximumDate="12/31/2030"
+                                            Date="06/21/2018"
+                                            TextColor="#9D9999"
+                                            FontSize="18"
+                                            />
+                                <Button BackgroundColor="#254F6E" CornerRadius="3" Text="CREATE" TextColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="300" VerticalOptions="CenterAndExpand" Clicked="Button_CreateNotification"/>
+                            </StackLayout>
+                        </StackLayout>
+                    
+            
+                <!-- Pop up -->
+                <!-- Loading pop up -->
+                <ContentView x:Name="popupLoadingView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" 
+                             RelativeLayout.XConstraint="{ConstraintExpression
+                                                            Type=RelativeToParent, Property=Width,Factor=0.02}"
+                             RelativeLayout.YConstraint="{ConstraintExpression
+                                                            Type=RelativeToParent, Property=Height,Factor=0.25}">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="200" BackgroundColor="White">
+
+                            <ActivityIndicator x:Name="activityIndicator" Margin="0,50,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" WidthRequest="30" HeightRequest="30" ></ActivityIndicator>
+                            <Label x:Name="lblLoadingText" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" Text="Loading..."></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+                <!-- Change number pop up -->
+            <ContentView x:Name="popupLoginView" BackgroundColor="#C0808080" IsVisible="false" 
+                             RelativeLayout.XConstraint="{ConstraintExpression
+                                                            Type=RelativeToParent, Property=Width,Factor=0}"
+                             RelativeLayout.YConstraint="{ConstraintExpression
+                                                            Type=RelativeToParent, Property=Height,Factor=0}"
+                             RelativeLayout.HeightConstraint="{ConstraintExpression
+                                                            Type=RelativeToParent, Property=Height,Factor=1}"
+                             RelativeLayout.WidthConstraint="{ConstraintExpression
+                                                            Type=RelativeToParent, Property=Width,Factor=1}"
+                         >
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="0">
+                    <Label Text="Update foreign number" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontSize="18" BackgroundColor="#04B5ED" HeightRequest="50"/>
+                        <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="300" BackgroundColor="White">
+                            <Entry Margin="20,20,20,10" Placeholder="Enter new number"></Entry>
+                        <Button Margin="20,0,20,0" Text="Update" TextColor="White" CornerRadius="5" BackgroundColor="#04B5ED"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+</RelativeLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
