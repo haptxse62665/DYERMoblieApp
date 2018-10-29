@@ -32,7 +32,7 @@
                 <!-- Upper part -->
                 <Image Source="university128.png" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" BackgroundColor="Transparent"/>
                 <Label/>
-                <Label Text="FPT UNIVERSITY" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontFamily="Roboto-Bold.ttf" FontSize="Large"/>
+                <Label Text="FPT UNIVERSITY" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontFamily="Roboto-Bold.ttf" FontSize="Large" x:Name="lbUniversity"/>
                 <!--<Label Text="Hoa Lac High Tech Park,Hanoi, Vietnam" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>-->
                 <Label HeightRequest="40"/>
                 <!-- Lower part -->

@@ -116,6 +116,7 @@ namespace StudentApp
         private void Button_logout(object sender, EventArgs e)
         {
             IsGestureEnabled = false;
+            Helpers.Settings.TokenSettings = null;
             Application.Current.MainPage=new MainPage();
         }
 
@@ -127,6 +128,21 @@ namespace StudentApp
                 BarTextColor = Color.White
             };
             IsPresented = false;
+        }
+
+        protected override void OnAppearing()
+        {
+            if (Helpers.Settings.UsernameSettings != null)
+            {
+                Detail = new NavigationPage(new HostInfoPage())
+                {
+                    BarBackgroundColor = Color.FromHex("#254F6E"),
+                    BarTextColor = Color.White
+                };
+
+                IsPresented = false;
+                IsGestureEnabled = true;
+            }
         }
     }
 }

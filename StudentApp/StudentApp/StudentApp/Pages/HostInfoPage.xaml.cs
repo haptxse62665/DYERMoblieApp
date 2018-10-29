@@ -17,6 +17,7 @@ namespace StudentApp.Pages
 		public HostInfoPage ()
 		{
 			InitializeComponent ();
+            lbUniversity.Text = Helpers.Settings.TokenSettings;
 		}
 
         private void Call_Tapped(object sender, EventArgs e)
