@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DYCApp.View.Create_Notification"
+             x:Class="DYCApp.View.Create_NotificationToDYC"
              xmlns:custom="clr-namespace:DYCApp;assembly=DYCApp.NETStandard,Version=v2.0"
              xmlns:local="clr-namespace:DYCApp"
              BackgroundColor="#254F6E"
-             Title="CREATE NOTIFICATION"
+             Title="TO DYC NOTIFICATION"
              >
     <ContentPage.Content>
-        
-            <RelativeLayout >
+        <RelativeLayout >
             <BoxView BackgroundColor="White"
                          RelativeLayout.WidthConstraint="{ConstraintExpression
                         Type=RelativeToParent, Property=Width,Factor=1}"
@@ -18,6 +17,7 @@
                          RelativeLayout.YConstraint="{ConstraintExpression
                         Type=RelativeToParent, Property=Height, Factor=0.03}"
                 />
+
             <!-- Inputs group-->
             <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression
                                                                         Type=RelativeToParent, 
@@ -33,16 +33,10 @@
                                    HeightRequest="15">
                 </Frame>
                 <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20,0,20,20">
-                    <Picker Title="Select country" WidthRequest="300">
+                    <Picker Title="Select faculty" WidthRequest="300">
                         <Picker.Items>
                             <x:String>All</x:String>
                             <x:String>Country</x:String>
-                        </Picker.Items>
-                    </Picker>
-                    <Picker Title="Select host" WidthRequest="300">
-                        <Picker.Items>
-                            <x:String>All host</x:String>
-                            <x:String>Keio</x:String>
                         </Picker.Items>
                     </Picker>
                     <Entry Placeholder="Enter message title"  
@@ -75,6 +69,5 @@
                 </StackLayout>
             </StackLayout>
         </RelativeLayout>
-        
     </ContentPage.Content>
 </ContentPage>

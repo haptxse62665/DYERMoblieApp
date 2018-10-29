@@ -10,22 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace DYCApp.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Create_Notification : ContentPage
+	public partial class Create_NotificationToDYC : ContentPage
 	{
-		public Create_Notification ()
+		public Create_NotificationToDYC ()
 		{
 			InitializeComponent ();
-		    this.BindingContext = new List<string>()
-		    {
-		        "Test 1",
-		        "Test 2",
-		        "Test 3"
-		    };
-        }
-
+		}
 	    private void Button_CreateNotification(object sender, EventArgs e)
 	    {
 
 	    }
-	}
+    }
 }
