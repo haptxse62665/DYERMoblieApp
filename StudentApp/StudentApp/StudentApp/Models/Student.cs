@@ -7,22 +7,22 @@ namespace StudentApp.Models
 {
     public class Student
     {
-        string UserID {get; set;}
-        string Email { get; set; }
-        int PhoneNumber { get; set; }
-        string FullName { get; set; }
-        string FacultyID { get; set; }
-        int NewPhoneNumber { get; set; }
+        public int Id { get; set; }
 
-        public Student(string userID, string email, int phoneNumber, string fullName, string facultyId, int newPhoneNumber )
-        {
-            UserID = userID;
-            Email = email;
-            PhoneNumber = phoneNumber;
-            FullName = fullName;
-            FacultyID = facultyId;
-            NewPhoneNumber = newPhoneNumber;
+        public string FullName { get; set; }
 
-        }
+        public string NewPhoneNumber { get; set; }
+
+        public int HostID { get; set; }
+
+        public bool Arrival { get; set; }
+
+        public string ContactNumber { get; set; }
+
+        public string StudentID { get; set; }
+
+        public string Email { get; set; }
+
+        public string FacultyName { get; set; }
     }
 }

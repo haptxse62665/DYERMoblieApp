@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DYCApp"
              x:Class="DYCApp.MainPage"
-             xmlns:custom="clr-namespace:DYCApp;assembly=DYCApp..NETStandard,Version=v2.0"
+             xmlns:custom="clr-namespace:DYCApp;assembly=DYCApp.NETStandard,Version=v2.0"
              BackgroundColor="#254f6e"
              >
     <MasterDetailPage.Master>
@@ -23,7 +23,9 @@
                         <Button Text="Overview" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" Clicked="Button_Overview"></Button>
                     </StackLayout>
                     <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout Padding="30,0,0,0" Orientation="Horizontal" >
+                    
+                    <!-- Create notification master -->
+                    <StackLayout Padding="30,0,0,0" Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Button_CreateNotifications"/>
                         </StackLayout.GestureRecognizers>
@@ -31,7 +33,29 @@
                         <Button Text="Create Notifications" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_CreateNotifications"></Button>
                     </StackLayout>
                     <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout Padding="30,0,0,0" Orientation="Horizontal">
+
+                    <!-- Create notification to student master -->
+                        <StackLayout x:Name="NotificationToStudents" Padding="30,0,0,0" Orientation="Horizontal" IsVisible="False" BackgroundColor="#37556B">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Button_CreateNotificationsToStudents"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="alert64.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
+                        <Button Text="Students" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_CreateNotificationsToStudents"></Button>
+                    </StackLayout>
+                    <BoxView x:Name="NotificatonLine1" HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                    
+                    <!-- Create notification to DYC master -->
+                        <StackLayout x:Name="NotificationToDYC" Padding="30,0,0,0" Orientation="Horizontal" IsVisible="False" BackgroundColor="#37556B">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Button_CreateNotificationsToDYC"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="alert64.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
+                        <Button Text="DYC" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_CreateNotificationsToDYC"></Button>
+                    </StackLayout>
+                    <BoxView x:Name="NotificationLine2" HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+
+                    <!-- Responses master -->
+                        <StackLayout Padding="30,0,0,0" Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Button_Responses"/>
                         </StackLayout.GestureRecognizers>
@@ -39,6 +63,8 @@
                         <Button Text="Responses" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_Responses"></Button>
                     </StackLayout>
                     <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
+
+                    <!-- Arrived master -->
                     <StackLayout Padding="30,0,0,0"  Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Button_Arrived"/>
@@ -80,7 +106,9 @@
                    WidthRequest="100"
                    HeightRequest="200"/>
 
-
+                    <!-- Activity Indicator-->
+                    <ActivityIndicator HorizontalOptions="Center" x:Name="activity_indicator" />
+                    
                     <local:CustomEntry  
                 CornerRadius="15"  
                 IsCurvedCornersEnabled="True"  
@@ -94,6 +122,7 @@
                 WidthRequest="300"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="Center"
+                        x:Name="Username"
             />
                     <local:CustomEntry  
                 CornerRadius="15"  
@@ -109,6 +138,7 @@
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="Center"
                 IsPassword="True"
+                        x:Name="Password"
             />
                     <Button Text="Login" 
                     TextColor="White"

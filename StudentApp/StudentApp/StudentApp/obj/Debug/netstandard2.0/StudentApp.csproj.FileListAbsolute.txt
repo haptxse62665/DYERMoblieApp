@@ -16,3 +16,34 @@ C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\Notif
 C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\NotificationPage.xaml.g.cs
 C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\HostInfoPage.xaml.g.cs
 C:\Xamarin\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\UserProfilePage.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\ArrivalPage.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\ChangeNumber.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\EmergencyPage.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\HostInfoPage.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\NotificationOverview.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\NotificationPage.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\UserProfilePage.xaml.g.cs
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.csproj.CoreCompileInputs.cache
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.AssemblyInfoInputs.cache
+D:\Brunei project Xamarin code\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.AssemblyInfo.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\ArrivalPage.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\ChangeNumber.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\EmergencyPage.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\HostInfoPage.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\NotificationOverview.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\NotificationPage.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\Pages\UserProfilePage.xaml.g.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.csproj.CoreCompileInputs.cache
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.AssemblyInfoInputs.cache
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.AssemblyInfo.cs
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\bin\Debug\netstandard2.0\StudentApp.deps.json
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\bin\Debug\netstandard2.0\StudentApp.dll
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\bin\Debug\netstandard2.0\StudentApp.pdb
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.dll
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.pdb
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\XamlC.stamp
+D:\DYERMoblieApp\StudentApp\StudentApp\StudentApp\obj\Debug\netstandard2.0\StudentApp.csprojAssemblyReference.cache

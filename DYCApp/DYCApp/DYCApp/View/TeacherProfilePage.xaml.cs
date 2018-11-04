@@ -15,6 +15,9 @@ namespace DYCApp.View
 		public TeacherProfilePage ()
 		{
 			InitializeComponent ();
+            FullName.Text = Helpers.Settings.FullNameSettings;
+            Email.Text = Helpers.Settings.EmailSettings;
+            Phone.Text = Helpers.Settings.ContactNumberSettings;
 		}
         private void ToolbarItem_Clicked_1(object sender, EventArgs e)
         {

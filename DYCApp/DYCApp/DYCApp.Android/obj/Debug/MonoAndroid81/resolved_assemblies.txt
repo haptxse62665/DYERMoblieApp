@@ -1,9 +1,13 @@
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\DYCApp.Android.dll
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\DYCApp.dll
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\FormsViewGroup.dll
+D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\ImageCircle.Forms.Plugin.dll
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\Java.Interop.dll
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.dll
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\mscorlib.dll
+D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\Newtonsoft.Json.dll
+D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.Settings.Abstractions.dll
+D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.Settings.dll
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Core.dll
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\System.dll
 D:\DYERMoblieApp\DYCApp\DYCApp\DYCApp.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.dll

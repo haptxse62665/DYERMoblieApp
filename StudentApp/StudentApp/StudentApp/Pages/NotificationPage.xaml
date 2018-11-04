@@ -9,46 +9,36 @@
     <ContentPage.Content>
         <ScrollView>
 
-            <RelativeLayout>
-                <BoxView BackgroundColor="#FE3F3F"
+            <StackLayout>
+                <!--<BoxView BackgroundColor="#FE3F3F"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                             Property=Height,
                                                                             Factor=0.5}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                             Property=Width,
-                                                                            Factor=1}"/>
-                <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                            Property=Height,
-                                                                            Factor=0}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                            Property=Height,
-                                                                            Factor=0}"
-                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                            Property=Height,
-                                                                            Factor=1}"
-                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                            Property=Width,
-                                                                            Factor=1}"
-                         Padding="15,15,15,30"
-            >
+                                                                            Factor=1}"/>-->
+                <StackLayout BackgroundColor="#FE3F3F" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <Image Source="alert70.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="150" WidthRequest="150" BackgroundColor="Transparent"/>
+                </StackLayout>
+                <StackLayout Padding="15,15,15,30">
+                   
                     <!-- Start of Notification details -->
                     <StackLayout HorizontalOptions="CenterAndExpand">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Location:" TextColor="#00A9DE" FontSize="15"/>
-                            <Label Text="Japan" TextColor="White" FontSize="15"/>
+                            <Label Text="{Binding Location}" TextColor="White" FontSize="15"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Type:" TextColor="#00A9DE" FontSize="15"/>
-                            <Label Text="Earthquake" TextColor="White" FontSize="15"/>
+                            <Label Text="{Binding TitleNotification}" TextColor="White" FontSize="15"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Hazard level:" TextColor="#00A9DE" FontSize="15"/>
-                            <Label Text="High" TextColor="#F33B3B" FontSize="15"/>
+                            <Label Text="{Binding LevelEmergency}" TextColor="#F33B3B" FontSize="15"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Date:" TextColor="#00A9DE" FontSize="15"/>
-                            <Label Text="01/01/2090" TextColor="White" FontSize="15"/>
+                            <Label Text="{Binding DateCreated}" TextColor="White" FontSize="15"/>
                         </StackLayout>
                     </StackLayout>
                     <!-- End of Notification details -->
@@ -59,7 +49,7 @@
                     <Button Text="I am not okay" TextColor="White" BackgroundColor="#FE3F3F" CornerRadius="15" HeightRequest="40" Clicked="Button_NotOk"/>
                     <!-- End of Respond elements -->
                 </StackLayout>
-            </RelativeLayout>
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

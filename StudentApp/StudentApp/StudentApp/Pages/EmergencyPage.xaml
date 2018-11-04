@@ -13,6 +13,7 @@
                 <Image Source="error.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="200"/>
                 <Label Text="I am in trouble" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Large" FontFamily="Muli-Regular.ttf"/>
                 <Button Text="Send my location"  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"  TextColor="#FE3F3F" BackgroundColor="White" CornerRadius="10" FontAttributes="Bold" FontSize="Large"  FontFamily="Muli-SemiBold.ttf" Clicked="Button_Clicked"/>
+                <Button Text="Cancel"  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"  TextColor="White" BackgroundColor="Black" CornerRadius="10" FontAttributes="Bold" FontSize="Large"  FontFamily="Muli-SemiBold.ttf" Clicked="Button_Cancel" Margin="40,0,40,0"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -28,6 +28,7 @@
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Center"
                    IsEnabled="False"
+                x:Name="oldNumber"
                     />
 
             <Label Text="New foreign number: " FontSize="Medium"  FontAttributes="Bold" TextColor="Black" HorizontalOptions="Start"/>
@@ -45,6 +46,7 @@
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Center"
                     Keyboard="Numeric"
+                   x:Name="newNumber"
                     />
 
 

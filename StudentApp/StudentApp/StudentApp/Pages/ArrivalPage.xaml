@@ -7,8 +7,9 @@
              BackgroundColor="#254f6e"
              Title="ARRIVAL">
     <ContentPage.Content>
-        <RelativeLayout>
-            <BoxView BackgroundColor="#47FD91"
+        <ScrollView>
+        <StackLayout>
+            <!--<BoxView BackgroundColor="#47FD91"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                             Property=Height,
                                                                             Factor=0.43}"
@@ -29,11 +30,14 @@
                                                                             Property=Width,
                                                                             Factor=1}"
                          Padding="15,15,15,30"
-                         >
+                         >-->
+                <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#47FD91">
+
                 <Image Source="airplane70.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="150" WidthRequest="150" BackgroundColor="Transparent"/>
-                <Label Text="Have you arrived?" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Bold" FontFamily="Robot-Thin"/>
-                <Button BackgroundColor="#47FD91" Text="I have arrived safely" TextColor="#254f6e" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontAttributes="Bold" CornerRadius="5" WidthRequest="200" FontFamily="Roboto-Thin"/>
-                <Label Text="Please enter your updated" HorizontalOptions="CenterAndExpand"  TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
+                <Label/>
+            </StackLayout>
+            <StackLayout Padding="30,30,30,30" VerticalOptions="FillAndExpand">
+                <Label Text="Please enter your updated" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"  TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
                 <Label Text="contact number (if you have any):" HorizontalOptions="CenterAndExpand"  TextColor="White" FontFamily="Roboto-Thin" FontAttributes="Bold" FontSize="Medium"/>
                 <local:CustomEntry  
                     CornerRadius="7"  
@@ -47,9 +51,16 @@
                     TextColor="White" 
                     HeightRequest="40"
                     WidthRequest="60"
-                    
+                    Keyboard="Numeric"
+                    x:Name="newNumber"
                 />
+                <Label/>
+                <Label Text="Have you arrived?" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" TextColor="White" FontSize="Large" FontAttributes="Bold" FontFamily="Robot-Thin"/>
+                <Button BackgroundColor="#47FD91" Text="I have arrived safely" TextColor="#254f6e" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" FontAttributes="Bold" CornerRadius="5" WidthRequest="200" FontFamily="Roboto-Thin" Clicked="Button_Clicked"/>
+                
             </StackLayout>
-        </RelativeLayout>
+        
+        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -5,6 +5,10 @@
              BackgroundColor="#254F6E"
              Title="NOTIFICATIONS"
              >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="Rocket.png" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <RelativeLayout >
             <BoxView BackgroundColor="White"
@@ -31,6 +35,7 @@
                                HorizontalOptions="CenterAndExpand"
                                TextColor="#254F6E"
                                FontAttributes="Bold"/>
+                        <ActivityIndicator HorizontalOptions="Center" x:Name="activity_indicator" />
                         <Label Text="Hazard Level"
                                HorizontalOptions="CenterAndExpand"
                                TextColor="#254F6E"
@@ -38,10 +43,31 @@
                     </StackLayout>
                 </Frame>
 
+                
                 <ListView x:Name="listView"
                           BackgroundColor="White"
-                          ItemSelected="listView_ItemSelected"
+                          ItemSelected="listView_ItemSelected"    
                 >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                
+                            <StackLayout Orientation="Horizontal"
+                                      Padding="30,10,30,0">
+                                
+                                <Label Text="{Binding TitleNotification}"
+                               HorizontalOptions="StartAndExpand"
+                               
+                               FontAttributes="Bold"/>
+                                <Label Text="{Binding LevelEmergency}"
+                               HorizontalOptions="EndAndExpand"
+                               
+                               FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
         </RelativeLayout>

@@ -11,7 +11,6 @@ namespace StudentApp
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 

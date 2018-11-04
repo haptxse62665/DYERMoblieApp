@@ -32,7 +32,7 @@
                 <!-- Upper part -->
                 <Image Source="university128.png" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" BackgroundColor="Transparent"/>
                 <Label/>
-                <Label Text="FPT UNIVERSITY" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontFamily="Roboto-Bold.ttf" FontSize="Large" x:Name="lbUniversity"/>
+                <Label Text="LOADING...." TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontFamily="Roboto-Bold.ttf" FontSize="Large" x:Name="HostName"/>
                 <!--<Label Text="Hoa Lac High Tech Park,Hanoi, Vietnam" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>-->
                 <Label HeightRequest="40"/>
                 <!-- Lower part -->
@@ -47,7 +47,7 @@
                             <Image Source="phone128.png" HeightRequest="30" WidthRequest="30"/>
                             <StackLayout>
                                 <Label Text="CONTACT NUMBER" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
-                                <Label Text="+123 456 789" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
+                                <Label Text="Loading...." TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium" x:Name="HostPhoneNumber"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>
@@ -59,7 +59,7 @@
                             <Image Source="envelope128.gif" HeightRequest="30" WidthRequest="30"/>
                             <StackLayout>
                                 <Label Text="EMAIL" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
-                                <Label Text="international.admission@fpt.edu.vn" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Small"/>
+                                    <Label Text="Loading...." TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Small" x:Name="HostEmail"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>
@@ -71,7 +71,7 @@
                             <Image Source="addressBook128.png" HeightRequest="30" WidthRequest="30"/>
                             <StackLayout>
                                 <Label Text="ADDRESS" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Medium"/>
-                                <Label Text="Hoa Lac High Tech Park,Hanoi, Vietnam" TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Small"/>
+                                    <Label Text="Loading...." TextColor="White" FontFamily="Roboto-Bold.ttf" FontSize="Small" x:Name="HostAddress"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>

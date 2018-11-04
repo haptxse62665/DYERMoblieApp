@@ -9,86 +9,90 @@
 
     <MasterDetailPage.Master>
         <ContentPage BackgroundColor="#254f6e" Title="Master">
-          
+
             <ContentPage.Content>
                 <ScrollView>
-                    
-                
-                <StackLayout Margin="0,30,0,5" Spacing="0" >
-                    <StackLayout Orientation="Horizontal" Padding="50, 0, 0, 50">
-                        <Image Source="UBD_logo.png" HeightRequest="100" WidthRequest="60" HorizontalOptions="EndAndExpand" />
-                        <Label Text="UNIVERSITI BRUNEI DARUSSALAM" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Muli-SemiBold.ttf"/>
+
+
+                    <StackLayout Margin="0,30,0,5" Spacing="0" >
+                        <StackLayout Orientation="Horizontal" Padding="50, 0, 0, 50">
+                            <Image Source="UBD_logo.png" HeightRequest="100" WidthRequest="60" HorizontalOptions="EndAndExpand" />
+                            <Label Text="UNIVERSITI BRUNEI DARUSSALAM" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Muli-SemiBold.ttf"/>
+                        </StackLayout>
+                        <StackLayout Padding="30,0,0,0" Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_HostInfo"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="university128.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
+                            <Button Text="Host Information" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" Clicked="Button_HostInfo"></Button>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout Padding="30,0,0,0" Orientation="Horizontal" >
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_Notifications"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="alert64.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
+                            <Button Text="Notifications" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_Notifications"></Button>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout Padding="30,0,0,0" Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_Emergency"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="error.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
+                            <Button Text="Emergency" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_Emergency"></Button>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout Padding="30,0,0,0"  Orientation="Horizontal" x:Name="isArrical" >
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_Arrival"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="airplane.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
+                            <Button Text="Arrival" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_Arrival"></Button>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand" x:Name="lineOfArrival"/>
+                        <StackLayout Padding="30,0,0,0"  Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_UserProfile"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="guest70.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
+                            <Button Text="User profile" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_UserProfile"></Button>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout Padding="30,0,0,0"  Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_logout"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="logout128.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
+                            <Button Text="Logout" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_logout"></Button>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
+
                     </StackLayout>
-                    <StackLayout Padding="30,0,0,0" Orientation="Horizontal">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Button_HostInfo"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="university128.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
-                        <Button Text="Host Information" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" Clicked="Button_HostInfo"></Button>
-                    </StackLayout>
-                    <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout Padding="30,0,0,0" Orientation="Horizontal" >
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Button_Notifications"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="alert64.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
-                        <Button Text="Notifications" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_Notifications"></Button>
-                    </StackLayout>
-                    <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout Padding="30,0,0,0" Orientation="Horizontal">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Button_Emergency"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="error.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
-                        <Button Text="Emergency" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_Emergency"></Button>
-                    </StackLayout>
-                    <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout Padding="30,0,0,0"  Orientation="Horizontal">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Button_Arrival"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="airplane.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
-                        <Button Text="Arrival" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_Arrival"></Button>
-                    </StackLayout>
-                    <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout Padding="30,0,0,0"  Orientation="Horizontal">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Button_UserProfile"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="guest70.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
-                        <Button Text="User profile" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_UserProfile"></Button>
-                    </StackLayout>
-                    <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout Padding="30,0,0,0"  Orientation="Horizontal">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Button_logout"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="logout128.png" HeightRequest="17" WidthRequest="17" HorizontalOptions="Start"/>
-                        <Button Text="Logout" BackgroundColor="Transparent" TextColor="White" FontFamily="Muli-Regular.ttf" HorizontalOptions="StartAndExpand" Clicked="Button_logout"></Button>
-                    </StackLayout>
-                    <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand"/>
-                    
-                </StackLayout>
                 </ScrollView>
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master>
 
-<MasterDetailPage.Detail>
+    <MasterDetailPage.Detail>
         <ContentPage BackgroundColor="#254f6e">
-        <ContentPage.Content>
+            <ContentPage.Content>
 
-            <StackLayout Spacing="7" Padding="15">
+                <StackLayout Spacing="7" Padding="15">
 
+                    
 
-                <Image Source="UBD_logo_White.png"
+                    <Image Source="UBD_logo_White.png"
                        VerticalOptions="CenterAndExpand"
                        HorizontalOptions="CenterAndExpand"
                        WidthRequest="100"
                        HeightRequest="200"/>
 
-
-                <local:CustomEntry  
+                    <!-- Activity Indicator-->
+                    <ActivityIndicator HorizontalOptions="Center" x:Name="activity_indicator" />
+                    
+                    <!--input-->
+                    <local:CustomEntry  
                     CornerRadius="15"  
                     IsCurvedCornersEnabled="True"  
                     BorderColor="White"      
@@ -105,7 +109,7 @@
                     x:Name="Username"
                    
                     />
-                <local:CustomEntry  
+                    <local:CustomEntry  
                     CornerRadius="15"  
                     IsCurvedCornersEnabled="True"  
                     BorderColor="White"      
@@ -122,7 +126,7 @@
                     IsPassword="True"
                     x:Name="Password"
                 />
-                <Button Text="Login" 
+                    <Button Text="Login" 
                         TextColor="White"
                         BackgroundColor="#00A9DE"
                         CornerRadius="15"
@@ -133,8 +137,8 @@
                         Clicked="Button_Login"/>
 
 
-            </StackLayout>
+                </StackLayout>
             </ContentPage.Content>
-    </ContentPage>
-</MasterDetailPage.Detail>
+        </ContentPage>
+    </MasterDetailPage.Detail>
 </MasterDetailPage>

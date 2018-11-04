@@ -41,6 +41,26 @@
                           BackgroundColor="White"
                           ItemSelected="listView_ItemSelected"
                 >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <StackLayout Orientation="Horizontal"
+                                      Padding="30,10,30,0">
+                                    <Image Source="{Binding ImageURL}" HeightRequest="20" />
+                                    <Label Text="{Binding CountryName}"
+                               HorizontalOptions="StartAndExpand"
+                               
+                               FontAttributes="Bold"/>
+                                    <Label Text="{Binding NumberOfStudent}"
+                               HorizontalOptions="EndAndExpand"
+                               
+                               FontAttributes="Bold"/>
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
         </RelativeLayout>

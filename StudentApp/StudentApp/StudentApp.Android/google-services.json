@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "165254179370",
+    "firebase_url": "https://dyer-a2207.firebaseio.com",
+    "project_id": "dyer-a2207",
+    "storage_bucket": "dyer-a2207.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165254179370:android:a6e8934c29c4de95",
+        "android_client_info": {
+          "package_name": "com.companyname.StudentApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165254179370-umlcog40cc4gh4mnljke2v2cgukpo8ic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.StudentApp",
+            "certificate_hash": "658146e07a679d31f26c200d92751ef144da055b"
+          }
+        },
+        {
+          "client_id": "165254179370-qhcoppqk96erkn9p1mm39rburpgsjqil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRSnYlAP-jp3UH9dv-uPds2JSWQGlHRh4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165254179370-qhcoppqk96erkn9p1mm39rburpgsjqil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

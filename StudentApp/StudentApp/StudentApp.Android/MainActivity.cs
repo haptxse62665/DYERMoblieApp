@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using ImageCircle.Forms.Plugin.Droid;
 using Plugin.CurrentActivity;
+using Plugin.FirebasePushNotification;
 
 namespace StudentApp.Droid
 {
@@ -24,6 +25,9 @@ namespace StudentApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             ImageCircleRenderer.Init();
             LoadApplication(new App());
+
+            FirebasePushNotificationManager.ProcessIntent(this, Intent);
+
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
