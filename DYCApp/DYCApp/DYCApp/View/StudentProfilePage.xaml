@@ -5,7 +5,7 @@
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              BackgroundColor="#254F6E"
              
-             Title="USER PROFILE"
+             Title="STUDENT PROFILE"
              
              >
     <ContentPage.Content>

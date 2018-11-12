@@ -33,44 +33,53 @@
                                    HeightRequest="15">
                 </Frame>
                 <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20,0,20,20">
-                    <Picker Title="Select country" WidthRequest="300">
-                        <Picker.Items>
-                            <x:String>All</x:String>
-                            <x:String>Country</x:String>
-                        </Picker.Items>
+                    <!--countryPicker-->
+                    <Picker Title="Select country" WidthRequest="300" x:Name="PickerCountry" SelectedIndexChanged="PickerCountry_SelectedIndexChanged">
                     </Picker>
-                    <Picker Title="Select host" WidthRequest="300">
-                        <Picker.Items>
-                            <x:String>All host</x:String>
-                            <x:String>Keio</x:String>
-                        </Picker.Items>
+                    <!--hostPicker-->
+                    <Picker Title="Select host" WidthRequest="300" IsVisible="False" x:Name="PickerHost">
                     </Picker>
-                    <Entry Placeholder="Enter message title"  
+                    <!--facultyPicker--><!--
+                    <Picker Title="Select faculty" WidthRequest="300" x:Name="PickerFaculty">
+                    </Picker>-->
+                    <Entry x:Name="EntryTitle" Placeholder="Enter message title"  
                                        PlaceholderColor="#9D9999"
                                        HeightRequest="40"
                                        WidthRequest="310"
                                        FontSize="18"
 
                                 />
-                    <Entry Placeholder="Enter message content"  
+                    <Entry x:Name="EntryContent" Placeholder="Enter message content"  
                                        PlaceholderColor="#9D9999"
                                        HeightRequest="40"
                                        WidthRequest="310"
                                        FontSize="18"
+                          
                                 />
-                    <Picker Title="Select hazard level" WidthRequest="300" TextColor="White">
+                    <Picker Title="Select hazard level" WidthRequest="300" x:Name="HazardLevel" >
                         <Picker.Items>
                             <x:String>High</x:String>
                             <x:String>Medium</x:String>
                             <x:String>Low</x:String>
                         </Picker.Items>
                     </Picker>
-                    <DatePicker MinimumDate="01/01/2018"
+                    <!--<local:DatePickerCtrl x:Name="datePicker" 
+                                          Placeholder="Select estimated date of hazard" 
+                                          HeightRequest="45" 
+                                          HorizontalOptions="FillAndExpand"
+                                          />-->
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout>
+                            <Label Text="Select hazard date" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="(Estimated date)" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <DatePicker MinimumDate="01/01/2018"
                                             MaximumDate="12/31/2030"
-                                            Date="06/21/2018"
                                             TextColor="#9D9999"
                                             FontSize="18"
+                                    x:Name="datePicker"
                                             />
+                    </StackLayout>
                     <Button x:Name="Create_Button" BackgroundColor="#254F6E" CornerRadius="3" Text="CREATE" TextColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="300" VerticalOptions="CenterAndExpand" Clicked="Button_CreateNotification"/>
                     <Frame x:Name="ActivityFrame" BackgroundColor="LightGray" IsVisible="False"  CornerRadius="3" HorizontalOptions="CenterAndExpand" WidthRequest="300" HeightRequest="15" VerticalOptions="CenterAndExpand">
                         <ActivityIndicator x:Name="ActivityIndicator"

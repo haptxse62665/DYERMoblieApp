@@ -16,11 +16,17 @@ namespace DYCApp.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ListStudentPage : ContentPage
 	{
-		public ListStudentPage (Host host)
+        ObservableCollection<Student> listStudent;
+        string hostId;
+
+        public ListStudentPage (Host host)
 		{
 			InitializeComponent ();
-            if (Helpers.Settings.RoleNameSettings.Equals("DYC")) lbFaculty.IsVisible = false;
-            GetListStudents(host.HostID.ToString(), Helpers.Settings.FacultyIDSettings);
+
+            //cannot hide in list view
+            //if (Helpers.Settings.RoleNameSettings.Equals("DYC")) lbFaculty.IsVisible = false;
+            hostId = host.HostID.ToString();
+            GetListStudents(hostId, Helpers.Settings.tmpFacultyIDSettings);
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -51,10 +57,10 @@ namespace DYCApp.View
                 {
                     var content = await response.Content.ReadAsStringAsync();
                     var tmp = JsonConvert.DeserializeObject<List<Student>>(content);
-                    ObservableCollection<Student> listStudent = new ObservableCollection<Student>(tmp);
+                    listStudent = new ObservableCollection<Student>(tmp);
 
 
-                    listView.ItemsSource = listStudent;
+                    listView.ItemsSource = listStudent.OrderBy(x => x.FullName).ToList();
                 }
                 else
                 {
@@ -67,6 +73,24 @@ namespace DYCApp.View
                 //ToDo Give errormessage to user and possibly log error
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
+        }
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (e.NewTextValue == null)
+            {
+                GetListStudents(hostId, Helpers.Settings.tmpFacultyIDSettings);
+            }
+            else
+            {
+                listView.ItemsSource = GetSearch(e.NewTextValue).OrderBy(x => x.FullName).ToList();
+            }
+        }
+
+        IEnumerable<Student> GetSearch(string searchText)
+        {
+            if (string.IsNullOrWhiteSpace(searchText))
+                return listStudent;
+            return listStudent.Where(c => c.FullName.ToUpper().Contains(searchText.ToUpper()));
         }
     }
 }

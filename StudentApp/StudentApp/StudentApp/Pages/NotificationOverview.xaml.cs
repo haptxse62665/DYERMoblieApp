@@ -61,7 +61,7 @@ namespace StudentApp.Pages
                     ObservableCollection<Notification> listNotification = new ObservableCollection<Notification>(tmp);
 
 
-                    listView.ItemsSource = listNotification;
+                    listView.ItemsSource = listNotification.OrderBy(x => x.DateCreated).ToList();
 
                 }
                 else

@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DYCApp.View.ResponsesPage"
-             BackgroundColor="#254F6E"
-             Title="RESPONDED">
+             x:Class="DYCApp.View.ResponsesHostPage">
     <ContentPage.Content>
         <RelativeLayout >
             <BoxView BackgroundColor="White"
@@ -23,17 +21,17 @@
                 <Frame BackgroundColor="White"
                        BorderColor="Transparent"
                        CornerRadius="13"
-                       HeightRequest="40"
+                       HeightRequest="30"
                        >
                     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
                         <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="Start">
                             <Image Source="Filter.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="StartAndExpand" x:Name="imgFilter" IsVisible="False"/>
                             <!--<Label Text="Filter by faculty:" TextColor="#254F6E" WidthRequest="150" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>-->
-                            <Picker Title="Filter by faculty" WidthRequest="130" x:Name="PickerFaculty" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" TextColor="Black" IsVisible="False" SelectedIndexChanged="PickerFaculty_SelectedIndexChanged" >
+                            <Picker Title="Filter by faculty" WidthRequest="130" x:Name="PickerFaculty" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" TextColor="Black" IsVisible="False" >
 
                             </Picker>
                         </StackLayout>
-                        <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,8"  x:Name="searchBar" TextChanged="SearchBar_TextChanged"/>
+                        <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,8"  x:Name="searchBar"/>
 
                     </StackLayout>
 
@@ -42,8 +40,8 @@
                 <StackLayout Orientation="Horizontal" BackgroundColor="#E4E2E2"
                              HeightRequest="35" Padding="10,0,10,0"
                 >
-                    
-                    <Label Text="Notific. title"
+
+                    <Label Text="Host name"
                            HorizontalOptions="CenterAndExpand"
                            TextColor="#254F6E"
                            FontAttributes="Bold"
@@ -76,23 +74,21 @@
                 <!--Start of notification list-->
                 <ListView x:Name="listView"
                           BackgroundColor="White"
-                          ItemSelected="ListView_ItemSelected"
-                          HasUnevenRows="True"
+                          ItemSelected="listView_ItemSelected"
                 >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-
                                 <StackLayout Orientation="Horizontal" Padding="20,20,20,20">
                                     <StackLayout Orientation="Vertical" WidthRequest="150" HorizontalOptions="StartAndExpand">
-
-                                        <Label Text="{Binding NotifiTitle}" FontSize="15"/>
-                                        <Label Text="{Binding CountryName}" FontSize="10"/>
+                                        <Label Text="{Binding HostName}" FontSize="15"/>
                                     </StackLayout>
+
                                     <Label Text="{Binding CountNumberOK}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="20"/>
                                     <Label Text="{Binding CountNumberNotOK}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="20"/>
                                     <Label Text="{Binding CountWaiting}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="20"/>
                                     <Label Text="{Binding Total}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="20"/>
+                                    
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

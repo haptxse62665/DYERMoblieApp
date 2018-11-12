@@ -21,6 +21,8 @@ namespace DYCApp.View
 		}
         private void ToolbarItem_Clicked_1(object sender, EventArgs e)
         {
+            Helpers.Settings.TokenSettings = "";
+            Helpers.Settings.RoleNameSettings = "";
             Application.Current.MainPage = new MainPage()
             {
                 IsGestureEnabled = false

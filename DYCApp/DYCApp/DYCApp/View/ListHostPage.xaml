@@ -23,20 +23,23 @@
                 <Frame BackgroundColor="White"
                        BorderColor="Transparent"
                        CornerRadius="13"
-                       HeightRequest="15">
-                    <StackLayout Orientation="Horizontal"
-                    >
-                        <Label Text="HOST"
-                               HorizontalOptions="CenterAndExpand"
-                               TextColor="#254F6E"
-                               FontAttributes="Bold"/>
-                        <Label Text="No. of students"
-                               HorizontalOptions="CenterAndExpand"
-                               TextColor="#254F6E"
-                               FontAttributes="Bold"/>
+                       HeightRequest="40">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                        <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,8" TextChanged="SearchBar_TextChanged" x:Name="searchBar"/>
                     </StackLayout>
                 </Frame>
-
+                <StackLayout Orientation="Horizontal" BackgroundColor="#E4E2E2"
+                             HeightRequest="35"
+                    >
+                    <Label Text="HOST"
+                               HorizontalOptions="CenterAndExpand"
+                               TextColor="#254F6E"
+                               FontAttributes="Bold"/>
+                    <Label Text="No. of students"
+                               HorizontalOptions="CenterAndExpand"
+                               TextColor="#254F6E"
+                               FontAttributes="Bold"/>
+                </StackLayout>
                 <ListView x:Name="listView"
                           BackgroundColor="White"
                           ItemSelected="listView_ItemSelected"

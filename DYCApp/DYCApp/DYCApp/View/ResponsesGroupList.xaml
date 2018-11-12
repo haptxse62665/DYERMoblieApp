@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DYCApp.View.ResponsesGroupList"
+             BarBackgroundColor="#254F6E">
+    <ContentPage Title="Okay">
+        <ContentPage.Content>
+            <RelativeLayout>
+                <BoxView BackgroundColor="White"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0.02}"
+            />
+
+                <StackLayout Spacing="0"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1}">
+                    <Frame BackgroundColor="White"
+                       BorderColor="Transparent"
+                       CornerRadius="13"
+                       HeightRequest="30"
+                       >
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="Start">
+                                <Image Source="Filter.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="StartAndExpand" x:Name="imgFilter" IsVisible="False"/>
+                                <!--<Label Text="Filter by faculty:" TextColor="#254F6E" WidthRequest="150" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>-->
+                                <Picker Title="Filter by faculty" WidthRequest="130" x:Name="PickerFaculty" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" TextColor="Black" IsVisible="False" >
+
+                                </Picker>
+                            </StackLayout>
+                            <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,8"  x:Name="searchBar"/>
+
+                        </StackLayout>
+
+                    </Frame>
+                    <!--Start of Bar labels-->
+                    <StackLayout Orientation="Horizontal" BackgroundColor="#E4E2E2"
+                             HeightRequest="35" Padding="10,0,10,0"
+                >
+
+                        <Label Text="Student name"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"
+                           WidthRequest="300"/>
+                        <Label Text="Responded on"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <!--End of Bar labels-->
+
+                    <!--Start of notification list-->
+                    <ListView x:Name="listViewOk"
+                          BackgroundColor="White"
+                          ItemSelected="listViewOk_ItemSelected"
+                >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                                        <!--<StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
+                        </StackLayout.GestureRecognizers>-->
+
+                                        <Label Text="Wafi Nur Arif" FontSize="15" WidthRequest="200" VerticalOptions="CenterAndExpand"/>
+                                        <StackLayout>
+                                            <Label Text="2:00pm" HorizontalOptions="CenterAndExpand"/>
+                                            <Label Text="22/11/2019" HorizontalOptions="CenterAndExpand"/>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                    <BoxView HeightRequest="1" Color="#D9DEE1" HorizontalOptions="FillAndExpand"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <!--End of notification list-->
+                </StackLayout>
+            </RelativeLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Not okay">
+        <ContentPage.Content>
+            <RelativeLayout>
+                <BoxView BackgroundColor="White"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0.02}"
+            />
+
+                <StackLayout Spacing="0"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1}">
+                    <Frame BackgroundColor="White"
+                       BorderColor="Transparent"
+                       CornerRadius="13"
+                       HeightRequest="30"
+                       >
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="Start">
+                                <Image Source="Filter.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="StartAndExpand" x:Name="imgFilter2" IsVisible="False"/>
+                                <!--<Label Text="Filter by faculty:" TextColor="#254F6E" WidthRequest="150" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>-->
+                                <Picker Title="Filter by faculty" WidthRequest="130" x:Name="PickerFaculty2" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" TextColor="Black" IsVisible="False" >
+
+                                </Picker>
+                            </StackLayout>
+                            <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,8"  x:Name="searchBar1"/>
+
+                        </StackLayout>
+
+                    </Frame>
+                    <!--Start of Bar labels-->
+                    <StackLayout Orientation="Horizontal" BackgroundColor="#E4E2E2"
+                             HeightRequest="35" Padding="10,0,10,0"
+                >
+
+                        <Label Text="Student name"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"
+                           WidthRequest="300"/>
+                        <Label Text="Responded on"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <!--End of Bar labels-->
+
+                    <!--Start of notification list-->
+                    <ListView x:Name="listViewNotOk"
+                          BackgroundColor="White"
+                          ItemSelected="listViewNotOk_ItemSelected"
+                >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                                        <!--<StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
+                        </StackLayout.GestureRecognizers>-->
+
+                                        <Label Text="Wafi Nur Arif" FontSize="15" WidthRequest="200" VerticalOptions="CenterAndExpand"/>
+                                        <StackLayout>
+                                            <Label Text="2:00pm" HorizontalOptions="CenterAndExpand"/>
+                                            <Label Text="22/11/2019" HorizontalOptions="CenterAndExpand"/>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                    <BoxView HeightRequest="1" Color="#D9DEE1" HorizontalOptions="FillAndExpand"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <!--End of notification list-->
+                </StackLayout>
+            </RelativeLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Not responded">
+        <ContentPage.Content>
+            <RelativeLayout>
+                <BoxView BackgroundColor="White"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0.02}"
+            />
+
+                <StackLayout Spacing="0"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1}">
+                    <Frame BackgroundColor="White"
+                       BorderColor="Transparent"
+                       CornerRadius="13"
+                       HeightRequest="30"
+                       >
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="Start">
+                                <Image Source="Filter.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="StartAndExpand" x:Name="imgFilter3" IsVisible="False"/>
+                                <!--<Label Text="Filter by faculty:" TextColor="#254F6E" WidthRequest="150" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>-->
+                                <Picker Title="Filter by faculty" WidthRequest="130" x:Name="PickerFaculty3" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" TextColor="Black" IsVisible="False" >
+
+                                </Picker>
+                            </StackLayout>
+                            <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,8"  x:Name="searchBar2"/>
+
+                        </StackLayout>
+
+                    </Frame>
+                    <!--Start of Bar labels-->
+                    <StackLayout Orientation="Horizontal" BackgroundColor="#E4E2E2"
+                             HeightRequest="35" Padding="10,0,10,0"
+                >
+
+                        <Label Text="Student name"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"
+                           WidthRequest="300"/>
+                        <Label Text="Responded on"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <!--End of Bar labels-->
+
+                    <!--Start of notification list-->
+                    <ListView x:Name="listViewWaiting"
+                          BackgroundColor="White"
+                          ItemSelected="listViewWaiting_ItemSelected"
+                >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                                        <!--<StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
+                        </StackLayout.GestureRecognizers>-->
+
+                                        <Label Text="Wafi Nur Arif" FontSize="15" WidthRequest="200" VerticalOptions="CenterAndExpand"/>
+                                        <StackLayout>
+                                            <Label Text="2:00pm" HorizontalOptions="CenterAndExpand"/>
+                                            <Label Text="22/11/2019" HorizontalOptions="CenterAndExpand"/>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                    <BoxView HeightRequest="1" Color="#D9DEE1" HorizontalOptions="FillAndExpand"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+                    <!--End of notification list-->
+                </StackLayout>
+            </RelativeLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>

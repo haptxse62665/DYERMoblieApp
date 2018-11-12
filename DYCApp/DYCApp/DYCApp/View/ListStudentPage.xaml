@@ -23,20 +23,23 @@
                 <Frame BackgroundColor="White"
                        BorderColor="Transparent"
                        CornerRadius="13"
-                       HeightRequest="15">
-                    <StackLayout Orientation="Horizontal"
+                       HeightRequest="40">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                        <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,8" TextChanged="SearchBar_TextChanged" x:Name="searchBar"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Horizontal" BackgroundColor="#E4E2E2"
+                             HeightRequest="35"
                     >
-                        <Label Text="Name"
+                    <Label Text="Name"
                                HorizontalOptions="CenterAndExpand"
                                TextColor="#254F6E"
                                FontAttributes="Bold"/>
-                        <Label Text="Faculty"
+                    <Label Text="Faculty"
                                HorizontalOptions="CenterAndExpand"
                                TextColor="#254F6E"
                                FontAttributes="Bold" x:Name="lbFaculty"/>
-                    </StackLayout>
-                </Frame>
-
+                </StackLayout>
                 <ListView x:Name="listView"
                           BackgroundColor="White"
                           ItemSelected="listView_ItemSelected"
@@ -53,7 +56,7 @@
                                FontAttributes="Bold"/>
                                     <Label Text="{Binding FacultyName}"
                                HorizontalOptions="EndAndExpand"
-                               FontAttributes="Bold" x:Name="lbFaculty"/>
+                               FontAttributes="Bold"/>
                                 </StackLayout>
 
                             </ViewCell>

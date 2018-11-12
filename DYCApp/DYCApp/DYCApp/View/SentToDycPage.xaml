@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DYCApp.View.SentToDycPage"
+             Title="SENT (TO DYC)"
+             >
+    <ContentPage.Content>
+        <RelativeLayout>
+            <BoxView BackgroundColor="White"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0.02}"
+            />
+
+            <StackLayout Spacing="0"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1}">
+                <Frame BackgroundColor="White"
+                       BorderColor="Transparent"
+                       CornerRadius="13"
+                       HeightRequest="30"
+                       >
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                        <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,0"  x:Name="searchBar"/>
+                    </StackLayout>
+
+                </Frame>
+                <!--Start of Bar labels-->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#E4E2E2"
+                             HeightRequest="35" Padding="10,0,10,0"
+                >
+
+                    <Label Text="Notification title"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"
+                           WidthRequest="200"/>
+                    <Label Text="Sent to"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#254F6E"
+                           FontAttributes="Bold"
+                           VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <!--End of Bar labels-->
+
+                <!--Start of notification list-->
+                <StackLayout Orientation="Horizontal" Padding="20,10,20,10">
+                    <Label Text="Earthquake" FontSize="15" WidthRequest="200" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="All faculties" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <BoxView HeightRequest="1" Color="#D9DEE1" HorizontalOptions="FillAndExpand"/>
+                <!--End of notification list-->
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

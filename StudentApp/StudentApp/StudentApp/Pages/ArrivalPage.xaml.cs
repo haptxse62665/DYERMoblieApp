@@ -22,7 +22,7 @@ namespace StudentApp.Pages
         {
             try
             {
-                string URL = Helpers.Settings.URLSettings + "api/student/updateNewPhoneNumber?id=" + Id + "&phoneNumber=" + phone;
+                string URL = Helpers.Settings.URLSettings + "api/student/updateNewPhoneNumber/?id=" + Id + "&phoneNumber=" + phone;
 
                 HttpClient httpClient = new HttpClient();
 
@@ -31,7 +31,7 @@ namespace StudentApp.Pages
                 //httpClient.DefaultRequestHeaders.Authorization= new AuthenticationHeaderValue("Bearer " + Helpers.Settings.TokenSettings);
 
 
-                HttpResponseMessage response = await httpClient.GetAsync(new Uri(URL));
+                HttpResponseMessage response = await httpClient.PostAsync(new Uri(URL), null);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -93,7 +93,7 @@ namespace StudentApp.Pages
         {
             try
             {
-                string URL = Helpers.Settings.URLSettings + "api/student/updateArrival?id=" + Id;
+                string URL = Helpers.Settings.URLSettings + "api/student/updateArrival/?id=" + Id;
 
                 HttpClient httpClient = new HttpClient();
 
@@ -102,7 +102,7 @@ namespace StudentApp.Pages
                 //httpClient.DefaultRequestHeaders.Authorization= new AuthenticationHeaderValue("Bearer " + Helpers.Settings.TokenSettings);
 
 
-                HttpResponseMessage response = await httpClient.GetAsync(new Uri(URL));
+                HttpResponseMessage response = await httpClient.PostAsync(new Uri(URL), null);
 
                 if (response.IsSuccessStatusCode)
                 {

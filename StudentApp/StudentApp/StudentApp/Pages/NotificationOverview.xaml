@@ -6,7 +6,7 @@
              Title="NOTIFICATIONS"
              >
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="Rocket.png" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Icon="alarm.png" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -46,25 +46,26 @@
                 
                 <ListView x:Name="listView"
                           BackgroundColor="White"
-                          ItemSelected="listView_ItemSelected"    
+                          ItemSelected="listView_ItemSelected" 
+                          HasUnevenRows="True"
                 >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                
-                            <StackLayout Orientation="Horizontal"
-                                      Padding="30,10,30,0">
-                                
-                                <Label Text="{Binding TitleNotification}"
+                                <StackLayout Orientation="Vertical" Padding="30,10,30,0">
+                                    <StackLayout Orientation="Horizontal" >
+                                    <Image Source="alert512.png" HeightRequest="20" />
+                                    <Label Text="{Binding TitleNotification}"
                                HorizontalOptions="StartAndExpand"
-                               
+                               FontSize="Medium"
                                FontAttributes="Bold"/>
                                 <Label Text="{Binding LevelEmergency}"
                                HorizontalOptions="EndAndExpand"
-                               
+                               FontSize="Medium"
                                FontAttributes="Bold"/>
                             </StackLayout>
-
+                                    <Label Text="{Binding DateCreated, StringFormat='Date: {0}'}" FontSize="Small"/>
+                                </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>

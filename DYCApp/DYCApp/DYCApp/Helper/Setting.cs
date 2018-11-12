@@ -46,6 +46,9 @@ namespace DYCApp.Helpers
         private const string FacultyIDKey = "FacultyID_key";
         private static readonly string FacultyIDDefault = string.Empty;
 
+        private const string tmpFacultyIDKey = "tmpFacultyID_key";
+        private static readonly string tmpFacultyIDDefault = string.Empty;
+
         private const string DYCIDKey = "DYCID_key";
         private static readonly string DYCIDDefault = string.Empty;
 
@@ -60,6 +63,12 @@ namespace DYCApp.Helpers
 
         private const string RoleNameKey = "RoleName_key";
         private static readonly string RoleNameDefault = string.Empty;
+
+        private const string FacultyNameKey = "FacultyName_key";
+        private static readonly string FacultyNameDefault = string.Empty;
+
+        private const string UserIDKey = "UserID_key";
+        private static readonly string UserIDDefault = string.Empty;
         #endregion
 
 
@@ -145,6 +154,17 @@ namespace DYCApp.Helpers
                 AppSettings.AddOrUpdateValue(FacultyIDKey, value);
             }
         }
+        public static string tmpFacultyIDSettings
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(tmpFacultyIDKey, tmpFacultyIDDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(tmpFacultyIDKey, value);
+            }
+        }
 
         public static string DYCIDSettings
         {
@@ -200,6 +220,29 @@ namespace DYCApp.Helpers
             set
             {
                 AppSettings.AddOrUpdateValue(RoleNameKey, value);
+            }
+        }
+
+        public static string FacultyNameSettings
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(FacultyNameKey, FacultyNameDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(FacultyNameKey, value);
+            }
+        }
+        public static string UserIDSettings
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(UserIDKey, UserIDDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(UserIDKey, value);
             }
         }
     }

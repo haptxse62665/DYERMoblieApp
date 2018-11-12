@@ -17,17 +17,21 @@ namespace DYCApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ListHostPage : ContentPage
 	{
-		public ListHostPage (Country country)
+        ObservableCollection<Host> listHost;
+        string idCountry;
+
+        public ListHostPage (Country country)
 		{
 			InitializeComponent ();
-            GetListHost(country.ID.ToString(), Helpers.Settings.FacultyIDSettings);
+            idCountry = country.ID.ToString();
+            GetListHost(idCountry, Helpers.Settings.tmpFacultyIDSettings);
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (listView.SelectedItem == null) return;
-            var country = e.SelectedItem as Host;
-            await Navigation.PushAsync(new ListStudentPage(country));
+            var host = e.SelectedItem as Host;
+            await Navigation.PushAsync(new ListStudentPage(host));
             listView.SelectedItem = null;
         }
 
@@ -51,10 +55,10 @@ namespace DYCApp
                 {
                     var content = await response.Content.ReadAsStringAsync();
                     var tmp = JsonConvert.DeserializeObject<List<Host>>(content);
-                    ObservableCollection<Host> listHost = new ObservableCollection<Host>(tmp);
+                     listHost = new ObservableCollection<Host>(tmp);
 
 
-                    listView.ItemsSource = listHost;
+                    listView.ItemsSource = listHost.OrderBy(x => x.HostName).ToList(); 
                 }
                 else
                 {
@@ -67,6 +71,25 @@ namespace DYCApp
                 //ToDo Give errormessage to user and possibly log error
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (e.NewTextValue == null)
+            {
+                GetListHost(idCountry,Helpers.Settings.tmpFacultyIDSettings);
+            }
+            else
+            {
+                listView.ItemsSource = GetSearch(e.NewTextValue).OrderBy(x => x.HostName).ToList();
+            }
+        }
+
+        IEnumerable<Host> GetSearch(string searchText)
+        {
+            if (string.IsNullOrWhiteSpace(searchText))
+                return listHost;
+            return listHost.Where(c => c.HostName.ToUpper().Contains(searchText.ToUpper()));
         }
     }
 }

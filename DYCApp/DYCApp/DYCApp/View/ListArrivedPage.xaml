@@ -1,9 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DYCApp.View.ListArrivedPage"
              BackgroundColor="#254F6E"
-             Title="ARRIVED">
+             Title="ARRIVED REPONSE"
+            BarBackgroundColor="#254F6E">
+    <ContentPage Title="ARRIVED">
+
+        <ContentPage.Content>
+            <RelativeLayout >
+                <BoxView BackgroundColor="White"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0}"
+            />
+
+                <StackLayout Spacing="0"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1}">
+                 
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                            <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" TextChanged="SearchBar_TextChanged" x:Name="searchBar"/>
+                        </StackLayout>
+                        <ListView x:Name="listViewARRIVED"
+                          BackgroundColor="White"
+                          ItemSelected="listViewARRIVED_ItemSelected"
+                >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                    <StackLayout Orientation="Horizontal"
+                                      Padding="30,10,30,0">
+                                        <Label Text="{Binding FullName}"
+                               HorizontalOptions="StartAndExpand"
+                               
+                               FontAttributes="Bold"/>
+                                        <!--<Label Text="{Binding NumberOfStudent}"
+                               HorizontalOptions="EndAndExpand"
+                               
+                               FontAttributes="Bold"/>-->
+                                    </StackLayout>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </RelativeLayout>
+        </ContentPage.Content>
+
+    </ContentPage>
+    <ContentPage Title="NOT ARRIVED">
+        
     <ContentPage.Content>
         <RelativeLayout >
             <BoxView BackgroundColor="White"
@@ -12,7 +66,7 @@
                      RelativeLayout.HeightConstraint="{ConstraintExpression
                         Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
                      RelativeLayout.YConstraint="{ConstraintExpression
-                        Type=RelativeToParent, Property=Height, Factor=0.02}"
+                        Type=RelativeToParent, Property=Height, Factor=0}"
             />
 
             <StackLayout Spacing="0"
@@ -20,43 +74,38 @@
                         Type=RelativeToParent, Property=Width,Factor=1}"
                          RelativeLayout.HeightConstraint="{ConstraintExpression
                         Type=RelativeToParent, Property=Height, Factor=1}">
-                <Frame BackgroundColor="White"
-                       BorderColor="Transparent"
-                       CornerRadius="13"
-                       HeightRequest="15">
-                    <StackLayout Orientation="Horizontal"
-                    >
-                        <Label Text="JAPAN"
-                               HorizontalOptions="CenterAndExpand"
-                               TextColor="#254F6E"
-                               FontAttributes="Bold"/>
-                    </StackLayout>
-                </Frame>
-                <StackLayout 
-                    >
-                    <Label Text="ARRIVED"
-                               HorizontalOptions="StartAndExpand"
-                           TextColor="#254F6E"
-                               FontAttributes="Bold"/>
-                </StackLayout>
-                <ListView x:Name="listViewARRIVED"
+                    
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                            <SearchBar Placeholder="Search here" VerticalOptions="StartAndExpand" HorizontalOptions="Start" Margin="0,0,0,8" TextChanged="searchBar_TextChanged_1" x:Name="searchBar_1"/>
+                        </StackLayout>
+                    
+                    <ListView x:Name="listView"
                           BackgroundColor="White"
                           ItemSelected="listView_ItemSelected"
                 >
-                </ListView>
-                <StackLayout 
-                    >
-                    <Label Text="NOT ARRIVED"
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                    <StackLayout Orientation="Horizontal"
+                                      Padding="30,10,30,0">
+                                        <Label Text="{Binding FullName}"
                                HorizontalOptions="StartAndExpand"
-                           TextColor="#254F6E"
+                               
                                FontAttributes="Bold"/>
+                                        <!--<Label Text="{Binding NumberOfStudent}"
+                               HorizontalOptions="EndAndExpand"
+                               
+                               FontAttributes="Bold"/>-->
+                                    </StackLayout>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </StackLayout>
-                <ListView x:Name="listView"
-                          BackgroundColor="White"
-                          ItemSelected="listView_ItemSelected"
-                >
-                </ListView>
-            </StackLayout>
         </RelativeLayout>
     </ContentPage.Content>
-</ContentPage>
+
+    </ContentPage>
+</TabbedPage>

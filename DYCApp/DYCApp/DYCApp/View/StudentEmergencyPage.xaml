@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DYCApp.View.StudentEmergencyPage"
+             Title="Student Emergency"
+             BackgroundColor="#254F6E">
+    <ContentPage.Content>
+        <RelativeLayout >
+            <BoxView BackgroundColor="White"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1, Constant=-10}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=0.02}"
+            />
+
+            <StackLayout Spacing="0"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent, Property=Height, Factor=1}">
+                <Frame BackgroundColor="White"
+                       BorderColor="Transparent"
+                       CornerRadius="13"
+                       HeightRequest="15">
+                    <StackLayout Orientation="Horizontal"
+                    >
+                        <Label Text="STUDENTS IN EMERGENCY STATUS"
+                               HorizontalOptions="CenterAndExpand"
+                               TextColor="#254F6E"
+                               FontAttributes="Bold"
+                               />
+                    </StackLayout>
+                </Frame>
+
+                    <ListView x:Name="listView"
+                          BackgroundColor="White"
+                          ItemSelected="listView_ItemSelected"
+                          HasUnevenRows="True"                      
+                >
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Delete" Clicked="MenuItem_Clicked" CommandParameter="{Binding .}"/>
+                                </ViewCell.ContextActions>
+
+                                <StackLayout Orientation="Vertical" Padding="30,10,30,10"
+                                      >
+                                    <Label Text="{Binding FullName, StringFormat=' Name: {0}'}"
+                                           FontAttributes="Bold"
+                                           FontSize="Medium"
+                                           TextColor="#254F6E"/>
+                                    <!--<Label Text="{Binding StudentID, StringFormat='Student ID: {0}'}" FontAttributes="Bold" FontSize="Small"/>-->
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="30,10,20,10">
+                                        
+                                        <Button Image="phone.png" BackgroundColor="#0099FF" BorderRadius="20" Clicked="Button_Phone" CommandParameter="{Binding PhoneNumber}" TextColor="White" WidthRequest="50" HeightRequest="50" FontSize="Small" />
+                                        <Button Image="location.png" BackgroundColor="#0099FF" BorderRadius="20" Clicked="Button_Location"  CommandParameter="{Binding Coordinate}"  TextColor="White" WidthRequest="50" HeightRequest="50" FontSize="Small"/>
+                                        <Button Image="user.png" BackgroundColor="#0099FF" BorderRadius="20" Clicked="Button_Profile"  CommandParameter="{Binding UserName}"  TextColor="White" WidthRequest="50" HeightRequest="50" FontSize="Small"/>
+                                        </StackLayout>
+                                    <Label Text="{Binding DateCreate, StringFormat='Date: {0}'}" FontSize="Small"/>
+                                    </StackLayout>
+                                
+                            </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

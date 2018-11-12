@@ -10,5 +10,6 @@ namespace DYCApp.Model
         public string CountryName { get; set; }
         public int NumberOfStudent { get; set; }
         public string ImageURL { get; set; }
+        public string NumberArrivalPerTotal { get; set; }
     }
 }

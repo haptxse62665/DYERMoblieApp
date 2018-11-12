@@ -13,32 +13,34 @@ using Xamarin.Forms.Xaml;
 
 namespace DYCApp.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ArrivedPage : ContentPage
-	{
-        ObservableCollection<Country> listCountry;
-
-        public ArrivedPage ()
-		{
-			InitializeComponent ();
-
-            GetListCountry(Helpers.Settings.FacultyIDSettings);
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ResponsesHostPage : ContentPage
+    {
+        ObservableCollection<Responses> listResponses;
+        string title;
+        DateTime dateCreate;
+        public ResponsesHostPage(Responses responses)
+        {
+            InitializeComponent();
+            title = responses.NotifiTitle;
+            dateCreate = responses.DateCreate;
+            GetListResponsesHost(title, dateCreate, Helpers.Settings.tmpFacultyIDSettings);
         }
 
         private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (listView.SelectedItem == null) return;
-            var country = e.SelectedItem as Country;
-            await Navigation.PushAsync(new ListArrivedPage(country.CountryName));
+            var responses = e.SelectedItem as Responses;
+            //await Navigation.PushAsync(new ResponsesHostPage(responses));
             listView.SelectedItem = null;
         }
-        public async void GetListCountry(string facultyID)
-        {
+        public async void GetListResponsesHost(string title, DateTime dateCreate, string facultyID)
+         {
 
             try
             {
 
-                string URL = Helpers.Settings.URLSettings + "api/country/listCountryAndArrivedStudent?facultyID=" + facultyID;
+                string URL = Helpers.Settings.URLSettings + "api/userSendNotification/listHostAndCount?title=" + title + "&dateCreate=" + dateCreate + "&facultyID=" + facultyID;
 
 
                 HttpClient httpClient = new HttpClient();
@@ -53,16 +55,20 @@ namespace DYCApp.View
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    var tmp = JsonConvert.DeserializeObject<List<Country>>(content);
-                     listCountry = new ObservableCollection<Country>(tmp);
+                    var tmp = JsonConvert.DeserializeObject<List<Responses>>(content);
+                    listResponses = new ObservableCollection<Responses>(tmp);
 
 
-                    listView.ItemsSource = listCountry;
+                    listView.ItemsSource = listResponses.OrderBy(x => x.HostName).ToList();
+                }
+                else
+                {
+                    DisplayAlert("No Response", "URL :"+URL, "OK");
                 }
             }
             catch (Exception ex)
             {
-                DisplayAlert("No Notification", "Can not connect to the server. Please check your internet", "OK");
+                DisplayAlert("No Response", "Can not connect to the server. Please check your internet", "OK");
                 //ToDo Give errormessage to user and possibly log error
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
@@ -72,7 +78,7 @@ namespace DYCApp.View
         {
             if (e.NewTextValue == null)
             {
-                GetListCountry(Helpers.Settings.FacultyIDSettings);
+                GetListResponsesHost(title, dateCreate, Helpers.Settings.FacultyIDSettings);
             }
             else
             {
@@ -80,11 +86,12 @@ namespace DYCApp.View
             }
         }
 
-        IEnumerable<Country> GetSearch(string searchText)
+        IEnumerable<Responses> GetSearch(string searchText)
         {
             if (string.IsNullOrWhiteSpace(searchText))
-                return listCountry;
-            return listCountry.Where(c => c.CountryName.ToUpper().Contains(searchText.ToUpper()));
+                return listResponses;
+            return listResponses.Where(c => c.NotifiTitle.ToUpper().Contains(searchText.ToUpper()));
         }
+
     }
 }
